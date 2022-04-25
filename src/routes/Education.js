@@ -96,7 +96,6 @@ export default function Education() {
   ];
   return (
     <div onClick={() => null}>
-      <h1>Education</h1>
       <main style={{ padding: "1rem 0" }}>
         <div className="main-content">
           <AboutMe info={info} />
