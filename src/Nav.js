@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
+import Dialog from '@mui/material/Dialog';
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./fontawesome";
 import "./styles.css";
+
+
 
 const navSection = [
   { name: "Education", icon: ["fas", "graduation-cap"] },
@@ -10,11 +15,12 @@ const navSection = [
   { name: "Technologies", icon: ["fas", "atom"] },
   { name: "Projects", icon: ["fas", "code"] },
   { name: "Contact", icon: ["fas", "envelope"] }
-
+  
 ];
 
 const hamburger = {
-   name: "Hamburger", icon: ["fas", "bars"] }
+  name: "Hamburger", icon: ["fas", "bars"]
+}
 
 
 function NavItems(arr, icons) {
@@ -29,7 +35,9 @@ function NavItems(arr, icons) {
   ));
 }
 
+
 export default function Nav() {
+  const [open, setOpen] = useState(false)
   return (
     <>
       <div
@@ -39,12 +47,36 @@ export default function Nav() {
         }}
       >
         <div className="hamburger">
-          <h4>.devtoti</h4>
-        <FontAwesomeIcon icon="bars" size="2x" fixedWidth />
+          <h4>.devtoti<span>_</span></h4>
+          <FontAwesomeIcon onClick={() => setOpen(true)} icon="bars" size="2x" fixedWidth />
         </div>
         <nav>
           <ul>{NavItems(navSection)}</ul>
         </nav>
+        <main>
+        <Dialog 
+          open={open}
+          onClose={() => setOpen(false)}>
+                <IconButton
+              edge="start"
+              color="inherit"
+              onClick={handleClose}
+              aria-label="close"
+            >
+              <FontAwesomeIcon onClick={() => setOpen(false)} icon="times" size="2x" fixedWidth />
+              <CloseIcon />
+            </IconButton>
+          {navSection.map((item, ix) => (
+            <div className="nav-panel" key={ix}>
+              <Link to={item.name}>
+                <li onClick={() => setOpen(false)}>.{item.name}<span>_</span></li>
+              </Link>
+              <br />
+            </div>
+          ))}
+
+        </Dialog>
+        </main>
       </div>
       <Outlet />
     </>

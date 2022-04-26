@@ -7,7 +7,8 @@ import {
   faGraduationCap,
   faGlobeAmericas,
   faEnvelope,
-  faBars
+  faBars,
+  faTimes
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -17,5 +18,6 @@ library.add(
   faGraduationCap,
   faGlobeAmericas,
   faEnvelope,
-  faBars
+  faBars,
+  faTimes
 );
