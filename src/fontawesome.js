@@ -6,7 +6,8 @@ import {
   faAtom,
   faGraduationCap,
   faGlobeAmericas,
-  faEnvelope
+  faEnvelope,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -15,5 +16,6 @@ library.add(
   faAtom,
   faGraduationCap,
   faGlobeAmericas,
-  faEnvelope
+  faEnvelope,
+  faBars
 );

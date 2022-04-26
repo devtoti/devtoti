@@ -10,7 +10,12 @@ const navSection = [
   { name: "Technologies", icon: ["fas", "atom"] },
   { name: "Projects", icon: ["fas", "code"] },
   { name: "Contact", icon: ["fas", "envelope"] }
+
 ];
+
+const hamburger = {
+   name: "Hamburger", icon: ["fas", "bars"] }
+
 
 function NavItems(arr, icons) {
   return arr.map((item, ix) => (
@@ -33,8 +38,9 @@ export default function Nav() {
           width: "15vh"
         }}
       >
-        <div className="hamb" style={{ display: "none" }}>
-          <button>=</button>
+        <div className="hamburger">
+          <h4>.devtoti</h4>
+        <FontAwesomeIcon icon="bars" size="2x" fixedWidth />
         </div>
         <nav>
           <ul>{NavItems(navSection)}</ul>
