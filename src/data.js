@@ -1,3 +1,5 @@
+import { ImageSearchTwoTone } from '@mui/icons-material';
+
 let projects = [
   {
     name: "Day Planner",

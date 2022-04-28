@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { CalendarIcon, EmailIcon, GithubIcon, routeChange } from "./svg-icons";
 
 const Contact = () => {
   const [fname, setFName] = useState("");
@@ -37,7 +38,7 @@ const Contact = () => {
   }
 
   function handleForm(ev) {
-    console.log(fname, last, msg);
+    console.log(fname, last, msg);  
     const { value, name } = ev.target;
     if (name == "fName") {
       setFName(value);
@@ -49,13 +50,15 @@ const Contact = () => {
   }
 
   return (
+    <main className='main-contact'>
     <div className="contact-me-form">
       <form onSubmit={handleSubmit}>
         <div className="input-fields">
-          <h2>Contact me</h2>
+          <h2 className='main-header'>Contact Me</h2>
+          <h4 style={{color: 'gray', width: '30ch'}}>*Note: contact form section is currently under construction. Reach out for the bottom icons for my actual contact info.</h4>
           <h4>First name</h4>
           <input
-            style={{ height: "2em" }}
+            style={{ height: "3em" }}
             type="text"
             placeholder="your first name"
             value={fname}
@@ -70,7 +73,7 @@ const Contact = () => {
           )}
           <h4>Last name</h4>
           <input
-            style={{ height: "2em" }}
+            style={{ height: "3em" }}
             type="text"
             placeholder="your last name"
             value={last}
@@ -91,13 +94,20 @@ const Contact = () => {
             value={msg}
             name="Message"
             onChange={handleForm}
-            style={{ height: "3em" }}
+            style={{ height: "5em" }}
           ></input>
           {msgError && <small>Message must contain at least 10 letters.</small>}
-        </div>
         <button type="submit">SEND</button>
+        </div>
+        <div className='contact-icons'>
+
+      <GithubIcon />
+      <EmailIcon />
+      <CalendarIcon />
+        </div>
       </form>
     </div>
+    </main>
   );
 };
 const fields = [

@@ -33,13 +33,19 @@ body {
   height: 100%;
 }
 
+.main-header {
+  font-size: 2rem;
+  top: 2vh;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .contact-me-form {
-  background-color: lightblue;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  min-width: 600px;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 .contact-me-form small {
@@ -47,20 +53,17 @@ body {
   margin-top: 1rem;
 }
 
-.contact-me-form button {
-  margin-top: 1rem;
-  padding: 0.5rem 0;
-  width: 100%;
-}
 
 .contact-me-form h4 {
   text-align: left;
   font-size: 1.2em;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
 }
 
 .input-fields,
 input {
-  min-width: 40vw;
+  min-width: 60vw;
   border-radius: 5px;
   padding: 0 1rem;
 }
@@ -68,86 +71,48 @@ input {
 .contact-me-form small {
   font-size: 1rem;
   color: red;
+  width: 30ch;
 }
 
-/* .contact {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(161, 161, 161, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
+input,
+.contact-me-form button {
+  display: inline-block;
+  border: 2px solid #4b4a4a;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  width: calc(100% - 2rem)
+  
 }
-.contact-form {
+.contact-me-form button {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.contact-icons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  padding: 5px 0;
+  justify-content: space-evenly;
+  margin-top: 10vh;
 }
 
-.contact-form > input,
-h4 {
-  margin: 5px 0;
+form svg {
+  height: 5vh;
 }
 
-.form-content {
-  height: 50px;
+.programs-icons {
+  width: 100vw !important;
+}
+.programs-icons img {
+  transform: scale(0.5);
+  justify-content: space-evenly;
+  width: 10%;
 }
 
-input {
-  height: 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  margin: 10 0;
-  opacity: 50%;
-  border-width: 3px;
-  padding: 0 10px;
-  width: clamp(45ch, 50%, 75ch);
+.lang-table {
+  display: table;
 }
-
-.incomplete,
-.completed {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-}
-
-.incomplete > input {
-  border-color: red;
-  color: red;
-}
-
-input[type="text"]:focus {
-  background-color: lightcoral;
-}
-
-input:focus {
-  opacity: 100%;
-}
-.completed > input {
-  border-color: green;
-  color: green;
-}
-
-.small-hidden {
-  color: transparent;
-  display: none;
-}
-
-.small-error-message {
-  color: red;
-  display: inline;
-}
-
-.visible-content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-} */
-
 
 main {
   padding: 0;
@@ -163,6 +128,9 @@ main {
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .my-navbar {
@@ -233,11 +201,16 @@ td {
 }
 
 th {
-  background-color: gray;
+  background-color: black;
+  color: white;
 }
 
 tr:nth-child(odd) {
   background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: white;
 }
 
 tr:hover {
@@ -330,7 +303,19 @@ tr:hover {
       rgba(224, 48, 0, 1) 0%,
       rgba(255, 252, 8, 1) 100%);
   background: #f2f2f2;
+  z-index: 2;
 }
+
+@keyframes blinking {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
 
 .lang-section {
   align-self: center;
@@ -339,14 +324,16 @@ tr:hover {
 
 .lang-info button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2vh;
+  right: 5vw;
   border-radius: 50%;
-  font-size: 1.5rem;
-  width: 50px;
-  height: 50px;
-  font-weight: lighter;
-  box-shadow: -3px 3px 10px black;
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  font-weight: 400;
+  border: 1px solid black;
+  background-color: white;
+  animation: blinking 1s infinite alternate ease-in-out;
 }
 
 .lang-section p {
@@ -380,17 +367,33 @@ tr:hover {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 768px) and (min-width: 300px) {
+/* MEDIA QUERIES */
 
-  main {
-    /* background-color: aqua !important; */
+@media only screen and (max-width: 768px) and (min-width: 200px) {
+
+  main,
+  .lang-info,
+  .contact-me-form {
     width: 100vw;
     left: 0;
     top: 5vh;
   }
 
-  main * {
+
+  main * :not(.ed-table) {
     overflow: hidden;
+  }
+
+  .main-contact,
+  .main-projects,
+  .main-languages,
+  .main-education {
+    z-index: 2;
+  }
+
+  .main-content,
+  main {
+    display: grid;
   }
 
   .my-navbar {
@@ -408,17 +411,21 @@ tr:hover {
     justify-content: space-between;
   }
 
-  .my-navbar span, .nav-panel span {
-   color: red; 
-   font-size: 2rem;
-   animation: typing 0.6s infinite alternate ease-in-out;
+  .my-navbar span,
+  .nav-panel span {
+    color: red;
+    font-size: 2rem;
+    animation: typing 0.6s infinite alternate ease-in-out;
   }
 
   @keyframes typing {
     0% {
       opacity: 1;
-    } 100% {
-opacity: 0;    }
+    }
+
+    100% {
+      opacity: 0;
+    }
   }
 
   .nav-panel {
@@ -434,9 +441,11 @@ opacity: 0;    }
     font-size: clamp(1rem, 1.5rem, 2rem);
     text-align: center;
   }
+
   .nav-panel a {
     text-decoration: none;
   }
+
   nav {
     display: none;
   }
@@ -450,4 +459,50 @@ opacity: 0;    }
   .my-navbar li {
     display: none;
   }
+
+  .lang-table {
+    display: flex;
+    margin: 2rem;
+  }
+
+  .lang-table td {
+    padding: 1rem 0;
+  }
+
+  .nav-projects {
+    display: block;
+  }
+
+  .project-list {
+    z-index: 2;
+  }
+
+  .nav-projects img {
+    border-radius: 0;
+    width: clamp(40vw, 50vw, 60vw);
+    height: auto;
+    box-shadow: 0px 9px 9px 2px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 0px 9px 9px 2px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 9px 9px 2px rgba(0, 0, 0, 0.21);
+  }
+
+  .nav-projects .active {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .languages--block svg {
+    filter: none;
+    opacity: 1
+  }
+
+  .visible-content {
+    display: grid;
+  }
+
+  /* .contact-me-form button {
+    background-color: red;
+
+  } */
 }

@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Flags from "country-flag-icons/react/3x2";
 import { JSIcon, HTMLIcon, CSSIcon, ReactIcon } from "./svg-icons";
-import { useState } from "react";
+import { photoshop, figma, xd, illustrator } from '../imgs/index'
 
 export default function Languages() {
   const [showHtml, setShowHtml] = useState(false);
@@ -63,7 +64,7 @@ export default function Languages() {
   return (
     <>
       {!isContentShowing && (
-        <main style={{ padding: "1rem 0" }}>
+        <main className='main-languages' style={{ padding: "1rem 0" }}>
           <div className="visible-content">
             <h2>Languages / Frameworks </h2>
             <div className="languages--section">{myLanguages}</div>
@@ -74,7 +75,13 @@ export default function Languages() {
               <ReactIcon setShowReact={setShowReact} />
             </div>
             <h2 onClick={() => console.log("working")}>Programs</h2>
-            {myPrograms}
+            {/* {myPrograms} */}
+            <div className="languages--block programs-icons">
+              <img src={photoshop}/>
+              <img src={illustrator}/>
+              <img src={xd}/>
+              <img src={figma}/>
+            </div>
             <h2>Communication Skills</h2>
             <Languages arr={spokenLanguages} />
           </div>

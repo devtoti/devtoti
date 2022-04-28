@@ -12,9 +12,9 @@ import "./styles.css";
 const navSection = [
   { name: "Education", icon: ["fas", "graduation-cap"] },
   { name: "Languages", icon: ["fas", "globe-americas"] },
-  { name: "Technologies", icon: ["fas", "atom"] },
   { name: "Projects", icon: ["fas", "code"] },
   { name: "Contact", icon: ["fas", "envelope"] }
+  // { name: "Technologies", icon: ["fas", "atom"] },
   
 ];
 
@@ -47,7 +47,7 @@ export default function Nav() {
         }}
       >
         <div className="hamburger">
-          <h4>.devtoti<span>_</span></h4>
+          <h4 onClick={event =>  window.location.href='/'}>.devtoti<span>_</span></h4>
           <FontAwesomeIcon onClick={() => setOpen(true)} icon="bars" size="2x" fixedWidth />
         </div>
         <nav>
@@ -57,15 +57,9 @@ export default function Nav() {
         <Dialog 
           open={open}
           onClose={() => setOpen(false)}>
-                <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-            >
+      
               <FontAwesomeIcon onClick={() => setOpen(false)} icon="times" size="2x" fixedWidth />
-              <CloseIcon />
-            </IconButton>
+        
           {navSection.map((item, ix) => (
             <div className="nav-panel" key={ix}>
               <Link to={item.name}>

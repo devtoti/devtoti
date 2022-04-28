@@ -56,14 +56,14 @@ function AboutMe({ info, achs, display }) {
     <div className="about-me">
       <div className="about-me-txt">
         <h2 className="abme-title">
-          Hey, my name is {info.firstName + " " + info.lastName}
+          Hello! 
         </h2>
-        <h2></h2>
+        <h3 className="abme-title">My name is {info.firstName + " " + info.lastName}</h3>
         <h2>
-          I'm a self-taught front-end web developer based in Mexico City who is
+          I am a self-taught front-end web developer based in Mexico City who is
           looking for new and exciting experiences.
         </h2>
-        <h3>Here is a bit more about me:</h3>
+        <h3>Here are a few things you should know about me:</h3>
       </div>
       {/* <img className="profile-pic" src={imgs[0].imgUrl} /> */}
     </div>
@@ -74,34 +74,41 @@ export default function Education() {
   let achievements = [
     {
       event: "Education",
-      name: "Universidad Nacional Autonoma de Mexico",
-      field: "Architecture",
+      name: "Architect",
+      field: "UNAM",
       yearStart: 2016,
       yearEnd: 2022
     },
     {
-      event: "Remote job",
-      name: "Self-taught student",
-      field: "Programming",
-      yearStart: 2018,
+      event: "Freelancing",
+      name: "Programmer",
+      field: "Self-taught",
+      yearStart: 2019,
       yearEnd: "present"
     },
     {
       event: "Freelancing",
-      name: "Fiverr",
-      field: "Graphic design",
+      name: "Graphic Designer",
+      field: "Fiverr",
       yearStart: 2021,
+      yearEnd: "present"
+    },
+    {
+      event: "Freelancing",
+      name: "Sketcher & Illustrator",
+      field: "Personal studio",
+      yearStart: 2010,
       yearEnd: "present"
     }
   ];
   return (
     <div onClick={() => null}>
-      <main style={{ padding: "1rem 0" }}>
+      <main className='main-education' style={{ padding: "1rem 0" }}>
         <div className="main-content">
           <AboutMe info={info} />
           {/* <CVTable arg={animals} /> */}
           <CVTable arg={achievements} />
-          <h3>Graphic Design - UI - App Design</h3>
+          {/* <h3>Graphic Design - UI - App Design</h3> */}
         </div>
       </main>
     </div>

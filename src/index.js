@@ -10,6 +10,11 @@ import Project from "./routes/project";
 import Technologies from "./routes/Technologies";
 import Contact from "./routes/Contact";
 
+
+function headHomePage() {
+  console.log(123)
+  return <Link to="/App"></Link>
+}
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
@@ -34,7 +39,9 @@ ReactDOM.render(
             path="*"
             element={
               <main style={{ padding: "2rem" }}>
-                <p>There's nothing here!</p>
+                <h1>Oops!</h1>
+                <p>There does not seem to be anything here!</p>
+                <button className='nav-bn' type="button" onClick={headHomePage}>HOME PAGE</button>
               </main>
             }
           />
