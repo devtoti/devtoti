@@ -15,7 +15,7 @@ const navSection = [
   { name: "Projects", icon: ["fas", "code"] },
   { name: "Contact", icon: ["fas", "envelope"] }
   // { name: "Technologies", icon: ["fas", "atom"] },
-  
+
 ];
 
 const hamburger = {
@@ -47,19 +47,18 @@ export default function Nav() {
         }}
       >
         <div className="hamburger">
-          <h4 onClick={event =>  window.location.href='/'}>.devtoti<span>_</span></h4>
+          <h4 onClick={event => window.location.href = '/'}>.devtoti<span>_</span></h4>
           <FontAwesomeIcon onClick={() => setOpen(true)} icon="bars" size="2x" fixedWidth />
         </div>
         <nav>
           <ul>{NavItems(navSection)}</ul>
         </nav>
-        <main>
-        <Dialog 
+        <Dialog
           open={open}
           onClose={() => setOpen(false)}>
-      
-              <FontAwesomeIcon onClick={() => setOpen(false)} icon="times" size="2x" fixedWidth />
-        
+
+          <FontAwesomeIcon onClick={() => setOpen(false)} icon="times" size="2x" fixedWidth />
+
           {navSection.map((item, ix) => (
             <div className="nav-panel" key={ix}>
               <Link to={item.name}>
@@ -70,8 +69,23 @@ export default function Nav() {
           ))}
 
         </Dialog>
-        </main>
       </div>
+      {!open && <main className='main-page'>
+        <h1 className="welcome-txt">
+          Welcome to my page,</h1>
+          <h1>my name is Antonio.</h1>
+          <div class="triangle">
+        <svg id="triangle" viewBox="0 0 100 100">
+            	<polygon points="50 15, 100 100, 0 100"/>
+        </svg>
+     </div> 
+        <h2>Looking for a front-end developer?</h2>
+
+
+        <h3>You have come to the right place</h3>
+        
+        <button type="button" className="welcome-btn" onClick={() => setOpen(true)}>ENTER</button>
+      </main>}
       <Outlet />
     </>
   );

@@ -25,8 +25,11 @@ export default function App() {
   return (
     <div className="App">
       <Nav />
-      {/* <h3>Let us work together so we can achieve:</h3>
-      <h4>{displayTxt}</h4> */}
+      {/* <main className='main-page'>
+      <h3>Let us work together so we can achieve:</h3>
+      <h4>{displayTxt}</h4>
+      <p>lorem20</p>
+      </main> */}
     </div>
   );
 }

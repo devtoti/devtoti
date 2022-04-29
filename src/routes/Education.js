@@ -51,15 +51,18 @@ let info = {
   occupation: "architect"
 };
 
+{/* <h2 className="abme-title">
+  Hello! 
+</h2>
+<h3 className="abme-title">My name is {info.firstName + " " + info.lastName}</h3>
+<h2> */}
 function AboutMe({ info, achs, display }) {
   return (
     <div className="about-me">
       <div className="about-me-txt">
-        <h2 className="abme-title">
-          Hello! 
-        </h2>
-        <h3 className="abme-title">My name is {info.firstName + " " + info.lastName}</h3>
-        <h2>
+      <h1 className="main-header">
+          Education</h1>
+          <h2>
           I am a self-taught front-end web developer based in Mexico City who is
           looking for new and exciting experiences.
         </h2>
