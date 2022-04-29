@@ -47,7 +47,7 @@ export default function Nav() {
         }}
       >
         <div className="hamburger">
-          <h4 onClick={event => window.location.href = '/'}>.devtoti<span>_</span></h4>
+          <h4 className="devtoti" onClick={event => window.location.href = '/'}>.devtoti<span>_</span></h4>
           <FontAwesomeIcon onClick={() => setOpen(true)} icon="bars" size="2x" fixedWidth />
         </div>
         <nav>
@@ -71,6 +71,8 @@ export default function Nav() {
         </Dialog>
       </div>
       {!open && <main className='main-page'>
+        <div className="welcome-div">
+
         <h1 className="welcome-txt">
           Welcome to my page,</h1>
           <h1>my name is Antonio.</h1>
@@ -79,10 +81,11 @@ export default function Nav() {
             	<polygon points="50 15, 100 100, 0 100"/>
         </svg>
      </div> 
+        </div>
         <h2>Looking for a front-end developer?</h2>
 
 
-        <h3>You have come to the right place</h3>
+        {/* <h3>You have come to the right place</h3> */}
         
         <button type="button" className="welcome-btn" onClick={() => setOpen(true)}>ENTER</button>
       </main>}

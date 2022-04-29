@@ -51,11 +51,17 @@ let info = {
   occupation: "architect"
 };
 
-{/* <h2 className="abme-title">
-  Hello! 
-</h2>
-<h3 className="abme-title">My name is {info.firstName + " " + info.lastName}</h3>
-<h2> */}
+let achs = [
+  "beautiful apps",
+  "top quality projects",
+  "fresh new ideas",
+  "interesting collaborations",
+  "unique layouts",
+  "easy to use UI's",
+  "marvelous results"
+];
+
+
 function AboutMe({ info, achs, display }) {
   return (
     <div className="about-me">
@@ -74,6 +80,17 @@ function AboutMe({ info, achs, display }) {
 }
 
 export default function Education() {
+  const [displayTxt, setDisplayTxt] = useState("great things");
+let c = 0;
+let n = achs.length;
+useEffect(() => {
+  const interval = setInterval(() => {
+    c++;
+    setDisplayTxt(achs[c % n]);
+  }, 3000);
+  return () => clearInterval(interval);
+}, []);
+
   let achievements = [
     {
       event: "Education",
@@ -98,7 +115,7 @@ export default function Education() {
     },
     {
       event: "Freelancing",
-      name: "Sketcher & Illustrator",
+      name: "Illustrator",
       field: "Personal studio",
       yearStart: 2010,
       yearEnd: "present"
@@ -111,6 +128,8 @@ export default function Education() {
           <AboutMe info={info} />
           {/* <CVTable arg={animals} /> */}
           <CVTable arg={achievements} />
+      <h4>Let us work together so we can achieve:</h4>
+      <h4 className="text-inventions">{displayTxt}</h4>
           {/* <h3>Graphic Design - UI - App Design</h3> */}
         </div>
       </main>

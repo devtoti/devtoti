@@ -13,6 +13,7 @@ h1 {
 h2 {
   font-family: "Libre Franklin", sans-serif;
   font-weight: 500;
+  font-size: clamp(.5rem, 2rem, 3rem);
 }
 
 h3 {
@@ -23,6 +24,20 @@ h3 {
 h4 {
   font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
+}
+
+.coming-soon {
+  background-color: transparent;
+  width: 100%;
+  border: 2px dotted red;
+  border-radius: 5px;
+  color: red;
+  font-weight: 300;
+}
+
+.p-image h5 {
+  text-align: center;
+ 
 }
 
 .App {
@@ -47,11 +62,13 @@ body {
   margin-top: -4rem;
   text-decoration: underline 5px;
   text-decoration-color: lightcoral;
-  width: 10ch;
   justify-self: center;
+  width: 60%;
 }
 
 .triangle svg {
+  margin: 0;
+  padding: 0;
   width: 15%;
   height: 15%;
   fill: #f08080;
@@ -70,10 +87,25 @@ body {
 
 
 .welcome-txt {
-  font-size: 4rem !important;
+  font-size: clamp(50%, 32px + 1rem, 4rem) !important;
+  font-size: 4ch !important;
   text-decoration: underline 5px;
-  text-underline-offset: 10px;
   text-decoration-color: lightcoral;
+}
+
+/* .welcome-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.welcome-div * {
+  margin: 1rem 0;
+}
+
+.welcome-div {
+  display: contents;
+  width: 60%;
 }
 
 .main-page h3 {
@@ -156,8 +188,15 @@ input,
 .contact-icons {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10vh;
+  margin-top: 2vh;
+  padding: 0 1em;
+  
 }
+/* .contact-icons {
+ position: absolute;
+ bottom: 0;
+ overflow: visible;
+} */
 
 form svg {
   height: 5vh;
@@ -170,7 +209,7 @@ form svg {
 .programs-icons img {
   transform: scale(0.5);
   justify-content: space-evenly;
-  width: 10%;
+  width: 100%;
 }
 
 .lang-table {
@@ -294,7 +333,14 @@ tr:hover {
 .about-me-txt:nth-child(-n + 2) {
   margin: 0 1;
 }
+/* .main-education h4 {
+  padding-top: 1rem;
+} */
 
+.main-content .text-inventions {
+  color: lightcoral;
+  font-weight: 500;
+}
 .profile-pic {
   width: 200px;
   display: block;
@@ -428,25 +474,42 @@ tr:hover {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  -webkit-filter: grayscale(100);
 }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) and (min-width: 200px) {
 
+  html, body, .App {
+    height: 100%;
+  }
+
+  h2, h3 {
+    font-size: clamp(100%, 1rem + 2vw, 32px);
+  }
+  h4:not(.devtoti) {
+    color: gray;
+    font-size: clamp(100%, 1rem + 1vw, 24px) !important;
+  }
   main,
   .lang-info,
   .contact-me-form {
+    padding: 0;
     width: 100vw;
     left: 0;
     top: 5vh;
-    height: 95vh;
+    height: 95%;
   }
 
-  .main-education * {}
+  .main-education {
+    display: block;
+  }
 
   .ed-table {
-    margin: 0;
+    margin: auto;
+    /* padding-top: 2rem; */
+    max-width: 90vw;
   }
 
   main * :not(.ed-table) {
@@ -606,4 +669,8 @@ tr:hover {
     background-color: red;
 
   } */
+
+  .input-fields, .contact-me-form {
+    height: 100%;
+  }
 }

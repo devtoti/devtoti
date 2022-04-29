@@ -20,11 +20,11 @@ export default function Languages() {
     "Adobe XD"
   ];
   const spokenLanguages = [
+    { id: 1, lan: "Spanish", lvl: "Native", unicode: "ES" },
     { id: 0, lan: "English", lvl: "Fluent", unicode: "US" },
-    { id: 1, lan: "Spanish", lvl: "Fluent", unicode: "ES" },
     { id: 2, lan: "French", lvl: "Advanced", unicode: "FR" },
     { id: 3, lan: "German", lvl: "Intermediate", unicode: "DE" },
-    { id: 4, lan: "Portuguese", lvl: "Beginner", unicode: "BR" }
+    // { id: 4, lan: "Portuguese", lvl: "Beginner", unicode: "BR" }
   ];
 
   const Languages = ({ arr }) => {
@@ -65,8 +65,9 @@ export default function Languages() {
     <>
       {!isContentShowing && (
         <main className='main-languages' style={{ padding: "1rem 0" }}>
+          <h1 className="main-header">Languages</h1>
           <div className="visible-content">
-            <h2>Languages / Frameworks </h2>
+            <h2>Programming skills </h2>
             <div className="languages--section">{myLanguages}</div>
             <div className="languages--block">
               <HTMLIcon setShowHtml={setShowHtml} />
@@ -74,7 +75,7 @@ export default function Languages() {
               <JSIcon setShowJs={setShowJs} />
               <ReactIcon setShowReact={setShowReact} />
             </div>
-            <h2 onClick={() => console.log("working")}>Programs</h2>
+            <h2 onClick={() => console.log("working")}>Design tools</h2>
             {/* {myPrograms} */}
             <div className="languages--block programs-icons">
               <img src={photoshop}/>
@@ -105,14 +106,14 @@ const InfoHtml = ({ setShowHtml }) => {
         X
       </button>
       <div className="lang-section">
-        <h1>HTML Knowledge</h1>
-        <h3>This is what I can do:</h3>
+        <h1>HTML</h1>
+        <h3>I have knowledge in:</h3>
         <div className="learned">
           {htmlKnowledge.map((i, ix) => (
             <p key={ix}>{i}</p>
           ))}
         </div>
-        <h3>Currently learning:</h3>
+        <h3>I am currently interested in: </h3>
         <div className="to-learn">
           {htmlToDo.map((i, ix) => (
             <p key={ix}>{i}</p>
@@ -134,14 +135,14 @@ const InfoCSS = ({ setShowCss }) => {
         X
       </button>
       <div className="lang-section">
-        <h1>CSS Knowledge</h1>
-        <h3>This is what I can do:</h3>
+        <h1>CSS</h1>
+        <h3>I have knowledge in:</h3>
         <div className="learned">
           {cssKnowledge.map((i, ix) => (
             <p key={ix}>{i}</p>
           ))}
         </div>
-        <h3>Currently learning:</h3>
+        <h3>I am currently interested in: </h3>
         <div className="to-learn">
           {cssToDo.map((i, ix) => (
             <p key={ix}>{i}</p>
@@ -162,14 +163,14 @@ const InfoJs = ({ setShowJs }) => {
         X
       </button>
       <div className="lang-section">
-        <h1>JS Knowledge</h1>
-        <h3>This is what I can do:</h3>
+        <h1>Javascript</h1>
+        <h3>I have knowledge in:</h3>
         <div className="learned">
           {jsKnowledge.map((i, ix) => (
             <p key={ix}>{i}</p>
           ))}
         </div>
-        <h3>Currently learning:</h3>
+        <h3>I am currently interested in: </h3>
         <div className="to-learn">
           {jsToDo.map((i, ix) => (
             <p key={ix}>{i}</p>
@@ -190,14 +191,14 @@ const InfoReact = ({ setShowReact }) => {
         X
       </button>
       <div className="lang-section">
-        <h1>React Knowledge</h1>
-        <h3>This is what I can do:</h3>
+        <h1>React</h1>
+        <h3>I have knowledge in:</h3>
         <div className="learned">
           {reactKnowledge.map((i, ix) => (
             <p key={ix}>{i}</p>
           ))}
         </div>
-        <h3>Currently learning:</h3>
+        <h3>I am currently interested in: </h3>
         <div className="to-learn">
           {reactToDo.map((i, ix) => (
             <p key={ix}>{i}</p>
@@ -209,22 +210,22 @@ const InfoReact = ({ setShowReact }) => {
 };
 
 const htmlKnowledge = [
-  "DOM",
-  "forms",
-  "validation",
+  "DOM manipulation",
+  "tree structuring",
+  "link navigation",
+  "custom forms",
   "accesibility",
   "attributes",
-  "layout",
-  "navigation"
+  "layouts",
 ];
 
-const htmlToDo = ["SEO", "markup data"];
+const htmlToDo = ["HTML APIs", "HTML Media", "HTML Graphics","custom references"];
 
 const cssKnowledge = [
   "flexbox",
   "css grid",
   "floats",
-  "box models",
+  "css box models",
   "positioning",
   "prototypes",
   "responsiveness",
@@ -237,42 +238,45 @@ const cssToDo = [
   "effects",
   "transitions",
   "animations",
-  "dropdown menu",
+  "dropdown menus",
   "modern CSS"
 ];
 const jsKnowledge = [
-  "flexbox",
-  "css grid",
-  "floats",
-  "box models",
-  "positioning",
-  "prototypes",
-  "responsiveness",
-  "media queries"
+  "JavaScript fundamentals",
+  "objects: the basics",
+  "data types",
+  "managing browser pages",
+  "UI events",
+  "high order functions",
+  "scope closures",
+  "hoisting",
+  "execution context"
 ];
 
 const jsToDo = [
-  "effects",
-  "transitions",
-  "animations",
-  "dropdown menu",
-  "modern CSS"
+  "storing data",
+  "advanced events",
+  "promises",
+  "classes",
+  "prototypes",
+  "code quality"
 ];
 const reactKnowledge = [
-  "flexbox",
-  "css grid",
-  "floats",
-  "box models",
-  "positioning",
-  "prototypes",
-  "responsiveness",
-  "media queries"
+ "functional components",
+ "props",
+  "state",
+ "hooks",
+ "components",
+ "lifecycle of components",
+ "react-router",
+ "Nextjs",
+ 
 ];
 
 const reactToDo = [
-  "effects",
-  "transitions",
-  "animations",
-  "dropdown menu",
-  "modern CSS"
+  "useReducer",
+  "useContext",
+  "useMemo",
+  "class components",
+  "forms",
 ];

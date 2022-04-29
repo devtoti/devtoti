@@ -23,7 +23,7 @@ export default function Projects() {
   return (
     <>
       <main className="main-projects project-list" style={{ height: "auto" ? "auto" : "100%" }}>
-        <div className="project-list" style={{ padding: "1rem 0" }}>
+        <div className="project-list">
           <nav className="nav-projects">
             <h2 className='main-header'>.Projects</h2>
             {currArr.map((project, id) => (
@@ -38,7 +38,11 @@ export default function Projects() {
 
               >
                 <h4>{project.name}</h4>
+                <div className="p-image">
+
                 <img className={project.active == true ? 'project-image active' : 'project-image'}  ref={imgRef} src={project.img} />
+                <h5 className="coming-soon">COMING SOON</h5>
+                </div>
                 <p>Made with: {project.techs}</p>
               </NavLink>
             ))}

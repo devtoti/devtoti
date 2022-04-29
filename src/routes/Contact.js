@@ -55,7 +55,7 @@ const Contact = () => {
       <form onSubmit={handleSubmit}>
         <div className="input-fields">
           <h2 className='main-header'>Contact Me</h2>
-          <h4 style={{color: 'gray', width: '30ch'}}>*Note: contact form section is currently under construction. Reach out for the bottom icons for my actual contact info.</h4>
+          <h4>*Note: contact form section is currently under construction. Reach out for the bottom icons for my actual contact info.</h4>
           <h4>First name</h4>
           <input
             style={{ height: "3em" }}
