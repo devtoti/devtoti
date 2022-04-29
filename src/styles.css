@@ -499,6 +499,9 @@ tr:hover {
     height: 5vh;
   }
 
+  .project-list {
+    height: 95vh !important;
+  }
   .my-navbar .hamburger {
     width: 100vw;
     display: inline-flex;
