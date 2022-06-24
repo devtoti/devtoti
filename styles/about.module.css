@@ -1,0 +1,134 @@
+.main {
+  width: 100vw;
+  height: 100%;
+  background-color: #191C1D;
+  position: relative;
+  z-index: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-fish-skin.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.illustration {
+  background-color: #2E3132;
+  background-image: url("https://www.transparenttextures.com/patterns/nami.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  height: 30vh;
+  width: 100vw;
+  border-bottom: 2px solid #171a1b;
+}
+.illustration div:not(.badge) {
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.illustration div:not(.badge) img {
+  overflow: hidden !important;
+  z-index: -1;
+}
+.illustration .innerCircle {
+  background-color: #191C1D;
+  opacity: 0.5;
+  width: 200px;
+  height: 200px;
+}
+.illustration .outerCircle {
+  background-color: #191C1D;
+  width: 150px;
+  height: 150px;
+}
+
+.innerCircle {
+  width: 250px;
+  -webkit-animation: 5s ease-in-out pulse infinite;
+          animation: 5s ease-in-out pulse infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  50% {
+    width: 160px;
+    height: 160px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  50% {
+    width: 160px;
+    height: 160px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #A9ABAC;
+  background-color: none;
+  font-family: "Roboto Flex", sans-serif;
+  margin: 0 3rem;
+  padding-top: 2rem;
+  z-index: 10;
+  margin-top: 2rem;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: default;
+  background-color: #2E3132;
+  margin: 0 auto;
+  width: auto;
+  height: 10vh;
+  border: 2px solid #171a1b;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+.badge h3 {
+  vertical-align: middle;
+  padding: 0;
+}
+
+.aboutIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  background-color: transparent;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  width: 100vw;
+  height: 4rem;
+}
+.aboutIcons svg {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) saturate(100%) invert(89%) sepia(35%) saturate(551%) hue-rotate(59deg) brightness(94%) contrast(79%);
+  border-radius: 18px;
+  outline: 2px solid black;
+  outline-offset: 12px;
+}
+.aboutIcons svg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}/*# sourceMappingURL=about.module.css.map */

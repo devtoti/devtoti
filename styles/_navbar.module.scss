@@ -1,0 +1,36 @@
+@use 'variables' as var;
+@use 'mixins' as mix;
+
+.nav {
+    z-index: 10;
+    // position: absolute;
+    width: 100vw;
+    height: 8vh;
+    padding: 0 1rem;
+    background-color: var.$color-dark8;
+    border: 1px red solid;
+    overflow-x: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        list-style: none;
+        display: none;
+    }
+    svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    // .nav-icons {
+    //     background-color: red;
+    //     display: flex;
+    //     align-items: center;
+    // }
+}
+
+.rightMenu {
+    // background-color: red;
+    display: flex;
+    align-items: center;
+}

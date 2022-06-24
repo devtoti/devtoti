@@ -1,0 +1,80 @@
+@use 'mixins'as mix;
+@use 'variables'as var;
+
+.main {
+    @include mix.newSection(100%, var.$color-dark7);
+    // background-color: #07080f;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+   
+    div {
+        @include mix.projectText(var.$color-dark3);
+        background-color: var.$color-dark8;
+        margin: 1rem 0;
+    }
+
+    h3[data-title] {
+        @include mix.mainTitle();
+    }
+
+    .proyect {
+        position: relative;
+        height: 40vh;
+        
+        div[class*="link"] {
+            background-color: aliceblue;
+            @include mix.flexCenter(transparent, transparent, row);
+            justify-content: flex-end;
+            margin-right: 1rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            svg {
+                margin-top: auto;
+                align-self: flex-end;
+                width: 24px;
+                height: 24px;
+                margin: 0 0.5rem;
+                fill: var.$color-sd3;
+            }
+        }
+
+        
+    }
+
+
+    
+    div[class*="content"] {
+        @include mix.flexCenter(black, black, row);
+        padding: 0 1rem;
+        justify-content: space-around;
+        width: 100%;
+        height: 55%;
+        background-color: var.$color-dark9;
+        // @include mix.mainText();
+        * {
+            // border: 1px solid blue;
+            height: 100%;
+        }
+
+        div[class*="image"] {
+            height: 100%;
+            aspect-ratio: 1/1;
+            flex: 0.5;
+            background-color: rgba(0, 0, 0, 0.501);
+            // flex: 1;
+        }
+
+        
+    }
+
+
+}
+
+    .proyect:nth-child(odd) {
+
+        div[class*="content"] {
+        // border: 1px dashed green;
+        flex-direction: row-reverse
+    }
+}
