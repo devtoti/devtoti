@@ -58,7 +58,7 @@
 }
 
 .menu {
-    @include mix.flexCenter(var.$color-pr3, #00010f, column);
+    @include mix.flexCenter(var.$color-pr4, #00010f, column);
     position: absolute;
     top: 0;
     left: 0;
