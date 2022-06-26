@@ -1,22 +1,44 @@
-@use 'variables' as var;
-@use 'mixins' as mix;
+@use 'variables'as var;
+@use 'mixins'as mix;
 
 .nav {
     z-index: 10;
     // position: absolute;
     width: 100vw;
-    height: 8vh;
+    height: 5vh;
     padding: 0 1rem;
+    // position: absolute;
+    position: sticky;
+    top: 0;
     background-color: var.$color-dark8;
-    border: 1px red solid;
+    // border: 1px red solid;
     overflow-x: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     ul {
         list-style: none;
-        display: none;
+        font-family: "Roboto Flex";
+        // display: none;
+
+        li {
+            font-size: 3rem;
+            padding: 2rem;
+            text-transform: uppercase;
+            
+            &:hover {
+                color: var.$color-pr1;
+                cursor: pointer;
+            }
+            &::before {
+                content: '# ';
+                font-size: 1.5rem;
+                vertical-align: middle;
+            }
+        }
     }
+
     svg {
         height: 24px;
         width: 24px;
@@ -33,4 +55,25 @@
     // background-color: red;
     display: flex;
     align-items: center;
+}
+
+.menu {
+    @include mix.flexCenter(var.$color-pr3, #00010f, column);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    // overflow: hidden;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        background-color: #00010f;
+        height: 500vh;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
 }

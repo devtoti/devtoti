@@ -39,8 +39,6 @@ export default function ProjectCard(props) {
             </div>
             <div className="chips">
                 {chipsForLabels(labels)}
-            </div>
-
             <div className="links">
 
                 <h4 onClick={sendToPage}>
@@ -50,6 +48,8 @@ export default function ProjectCard(props) {
                     <GitHubIcon />
                 </h4>
             </div>
+            </div>
+
 
         </div>
     )

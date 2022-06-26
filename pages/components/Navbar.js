@@ -3,7 +3,7 @@ import Switch from '@mui/material/Switch';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import {useState} from 'react'
 const theme = createTheme({
   status: {
     danger: '#e53e3e',
@@ -20,15 +20,23 @@ const theme = createTheme({
   },
 });
 export default function Navbar() {
+const [openDialog, setOpenDialog] = useState(false)
 
+function openMenu() {
+  setOpenDialog((a)=> !a)
+}
   return (
     <div className={styles.nav}>
-      <MenuIcon />
+      {openDialog && 
+        <div className={styles.menu}>
       <ul>
         <li>About</li>
         <li>Projects</li>
         <li>Contact</li>
       </ul>
+        </div>
+      }
+      <MenuIcon onClick={openMenu}/>
       <div className={styles.rightMenu}>
       <ThemeProvider theme={theme}>
       <Switch defaultChecked />
