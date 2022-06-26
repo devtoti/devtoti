@@ -1,0 +1,189 @@
+@use 'variables'as var;
+@use 'mixins'as mix;
+
+.main {
+    @include mix.newSection(100%, var.$color-dark8);
+    position: relative;
+    z-index: 0;
+    height: 70vh;
+    margin-top: 0.5rem;
+    padding-bottom: 4rem;
+    position: relative;
+    // height: 95vh;
+    // background-color: #00010f;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-fish-skin.png");
+
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    h3 {
+        // color: var.$color-sd2;
+    }
+
+    div[class*="navBtns"] {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        // background-color: #171a1b;
+        z-index: 0;
+        // top: 50%;
+        
+        svg {
+            margin: 0 0.5rem;
+            height: 40px !important;
+            transform: scale(1.5, 2);
+        }
+    }
+}
+
+.illustration {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var.$color-dark7;
+    position: relative;
+    
+    // background-image: url('../public/images/coding.gif');
+    // filter: brightness(70%);
+    // background-size: cover;
+
+    background-image: url("https://www.transparenttextures.com/patterns/nami.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    height: 30vh;
+    width: inherit;
+    border-bottom: 2px solid #171a1b;
+    // position: absolute;
+
+    div:not(.badge) {
+        border-radius: 50%;
+        position: absolute;
+        
+        
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        // transform-origin: center;
+        img {
+            overflow: hidden !important;
+            z-index: -1;
+            // clip: rect(0px,300px,145px,0px);
+        }
+
+    }
+
+    .innerCircle {
+        background-color: var.$color-dark8;
+        opacity: 0.5;
+        width: clamp(200px, 30vw, 70%);
+        height: 200px;
+
+    }
+
+    .outerCircle {
+        background-color: var.$color-dark8;
+        // position: relative;
+        width: 150px;
+        height: 150px;
+
+    }
+}
+
+.innerCircle {
+    // width: 250px;
+    animation: 5s ease-in-out pulse infinite;
+
+}
+
+@keyframes pulse {
+    0% {
+        width: 200px;
+        height: 200px;
+    }
+
+    50% {
+        width: 160px;
+        height: 160px;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.content {
+    @include mix.flexCenter(var.$color-dark2);
+    @include mix.mainText();
+    z-index: 10;
+    margin-top: 1rem;
+}
+
+.badge {
+    @include mix.flexCenter(default, var.$color-dark7);
+    margin: auto;
+    width: auto;
+    height: 8vh;
+    border: 2px solid #171a1b;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+
+    h3 {
+        vertical-align: middle;
+        padding: 0 1rem;
+    }
+}
+
+.aboutIcons {
+    @include mix.flexCenter(transparent, transparent, row);
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    width: 100vw;
+    height: 3rem;
+    // border: 1px red solid;
+
+    svg {
+        width: 36px;
+        height: 36px;
+        filter: brightness(0) saturate(100%) invert(89%) sepia(35%) saturate(551%) hue-rotate(59deg) brightness(94%) contrast(79%);
+        border-radius: 18px;
+        outline: 2px solid black;
+        outline-offset: 12px;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+    }
+
+    // &::before {
+    //     content: 'AAA';
+    //     display: inline-block;
+    //     height: 40px;
+    //     width: 40px;
+    //     background: #9B191D;
+    // }
+
+}
+
+
+.section {
+    @include mix.flexCenter(var.$color-dark3, transparent, column);
+    height: 100%;
+    width: 80%;
+    // border: 1px solid red;
+
+    ul {
+        padding: 1rem 0;
+        list-style-position: inside;
+        margin-right: auto;
+        
+        li {
+            // display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+@use 'mixins'as mix;
+@use 'variables'as var;
+
+.main {
+    @include mix.newSection(100%, transparent);
+    border: none;
+
+    div[class*="projects"] {
+        @include mix.projectText(var.$color-dark3);
+        margin: 0.5rem 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+
+        
+        &:hover::before {
+            content: '';
+            width: inherit;
+            height: 200%;
+            background-image: conic-gradient(var.$color-pr3 20deg,
+                    transparent 120deg);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 0;
+            animation: borderLights 5s linear infinite;
+            transform: scale(1.5);
+            z-index: -1;
+        }
+
+        &:hover::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background-color: var.$color-dark8;
+            border-radius: 16px;
+            z-index: -1;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background-color: var.$color-dark8;
+            border-radius: 16px;
+            z-index: -1;
+        }
+        & * {
+
+        }
+    }
+
+    @keyframes borderLights {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(-360deg)
+        }
+    }
+
+    h3[data-title] {
+        @include mix.mainTitle();
+        // padding-top: 4rem;
+    }
+
+    .proyect {
+        position: relative;
+        height: auto;
+        padding-bottom: 4rem;
+
+
+        box-shadow: -5px 19px 16px -10px rgba(0, 0, 0, 0.1);
+
+
+
+        div[class*="chips"] {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0.5rem;
+            padding-bottom: 1rem;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+
+            div:not(div[class="links"]) {
+                &:hover {
+                    cursor: pointer;
+                    background-color: var.$color-pr1;
+                    transform: scale(1.1);
+                    border-color: var.$color-pr3;
+
+                    span {
+
+                        color: var.$color-pr3;
+                    }
+                }
+            }
+
+            span {
+                color: var.$color-dark3;
+            }
+
+        }
+
+        div[class*="links"] {
+            background-color: aliceblue;
+            @include mix.flexCenter(transparent, transparent, row);
+            justify-content: flex-end;
+            margin-right: 1rem;
+            // position: absolute;
+            flex: 0.8;
+            bottom: 0;
+            right: 0;
+
+            & svg:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+            svg {
+                margin-top: auto;
+                align-self: flex-end;
+                width: 24px;
+                height: 24px;
+                margin: 0 0.5rem;
+                fill: var.$color-sd3 !important;
+            }
+        }
+
+
+    }
+
+
+
+    div[class*="content"] {
+        @include mix.flexCenter(transparent, var.$color-dark9, row);
+        padding: 1rem;
+        box-sizing: border-box;
+        margin: 2px;
+        z-index: 3;
+
+        p {
+            margin: 0.5rem;
+        }
+
+        div[class*="image"] {
+            height: clamp(120px, 120px + 1vh, 250px);
+            width: clamp(120px, 120px + 1vh, 250px);
+            
+            flex:1;
+            // filter: grayscale(1);
+            // background-color: rgba(0, 0, 0, 0.501);
+            // flex: 1;
+        }
+
+
+    }
+
+
+}
+
+.proyect:nth-child(odd) {
+
+    div[class*="content"] {
+        flex-direction: row-reverse;
+        // float: left;
+    }
+}
+
+.proyect {
+    // border-color: 2px solid red;
+}

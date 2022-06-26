@@ -1,0 +1,18 @@
+.container {
+  height: auto;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  z-index: -5;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=Home.module.css.map */

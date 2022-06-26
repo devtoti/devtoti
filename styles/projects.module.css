@@ -1,0 +1,162 @@
+.main {
+  width: 95vw;
+  border-radius: 15px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 0;
+  height: auto;
+  margin-bottom: 3rem;
+  border: none;
+}
+.main div[class*=projects] {
+  margin: 0.5rem 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.main div[class*=projects] h3 {
+  padding: 1rem 0 0.5rem 0;
+  text-align: center;
+  color: #8F9192;
+  font-weight: 500;
+  letter-spacing: 0.1ch;
+}
+.main div[class*=projects] p {
+  padding-top: 0.5rem;
+  width: 22ch;
+  float: right;
+  color: #8F9192;
+}
+.main div[class*=projects]:hover::before {
+  content: "";
+  width: inherit;
+  height: 200%;
+  background-image: conic-gradient(#6FBC76 20deg, transparent 120deg);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 0;
+  -webkit-animation: borderLights 5s linear infinite;
+          animation: borderLights 5s linear infinite;
+  transform: scale(1.5);
+  z-index: -1;
+}
+.main div[class*=projects]:hover::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background-color: #1e2223;
+  border-radius: 16px;
+  z-index: -1;
+}
+.main div[class*=projects]::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background-color: #1e2223;
+  border-radius: 16px;
+  z-index: -1;
+}
+@-webkit-keyframes borderLights {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes borderLights {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.main h3[data-title] {
+  font-family: "Roboto Flex", sans-serif;
+  margin: 0 auto;
+  padding-top: 1rem;
+  text-align: center;
+}
+.main .proyect {
+  position: relative;
+  height: auto;
+  padding-bottom: 4rem;
+  box-shadow: -5px 19px 16px -10px rgba(0, 0, 0, 0.1);
+}
+.main .proyect div[class*=chips] {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.main .proyect div[class*=chips] div:not(div[class=links]):hover {
+  cursor: pointer;
+  background-color: #A5F5A9;
+  transform: scale(1.1);
+  border-color: #6FBC76;
+}
+.main .proyect div[class*=chips] div:not(div[class=links]):hover span {
+  color: #6FBC76;
+}
+.main .proyect div[class*=chips] span {
+  color: #8F9192;
+}
+.main .proyect div[class*=links] {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  background-color: transparent;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  flex: 0.8;
+  bottom: 0;
+  right: 0;
+}
+.main .proyect div[class*=links] svg:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.main .proyect div[class*=links] svg {
+  margin-top: auto;
+  align-self: flex-end;
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+  fill: #A4A9CE !important;
+}
+.main div[class*=content] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  background-color: #171a1b;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 2px;
+  z-index: 3;
+}
+.main div[class*=content] p {
+  margin: 0.5rem;
+}
+.main div[class*=content] div[class*=image] {
+  height: clamp(120px, 120px + 1vh, 250px);
+  width: clamp(120px, 120px + 1vh, 250px);
+  flex: 1;
+}
+
+.proyect:nth-child(odd) div[class*=content] {
+  flex-direction: row-reverse;
+}/*# sourceMappingURL=projects.module.css.map */
