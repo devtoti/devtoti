@@ -29,7 +29,7 @@ export default function ProjectCard(props) {
             <div className="content">
                 <div className="image" style={{ position: "relative" }}>
                     <Image
-                        src={img.src}
+                        src={img}
                         alt="`project ${name} illustration"
                         layout='fill'
                         objectFit='contain'

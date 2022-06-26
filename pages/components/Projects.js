@@ -24,6 +24,9 @@ const xavierLabels = [
 
 export default function Projects() {
   console.log(medizenImg)
+  console.log(medizenImg.src)
+  console.log(newiconImg.src)
+
   return (
     <div className={styles.main}>
        <Divider variant="middle" />
