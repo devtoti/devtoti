@@ -6,10 +6,14 @@ import styles from '../../styles/projects.module.scss'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 import Chip from '@mui/material/Chip';
+import {medizenLabels} from './Projects'
 
-export default function ProjectCard(props) {
+
+export default function ProjectCard(props, {lbls}) {
     const { name, description, img, url, repo, id, labels } = props
 
+    console.log(medizenLabels)
+    console.log(lbls)
     const router = useRouter()
     const sendToPage = (e) => {
         e.preventDefault()
@@ -21,9 +25,15 @@ export default function ProjectCard(props) {
     }
 
  
-    const chipsForLabels = labels => labels.map((el, id) => <Chip label={el} size="small" variant="outlined" id={id}/>)
+    const chipsForLabels = labels => {
+        console.log(labels)
+        // const obj = {...labels}
+        // console.log(Object.values(obj))
+        // console.log(Array.isArray(labels))
+        // return labels.map((el, id) => <Chip label={el} size="small" variant="outlined" key={id}/>)
+    }
 
-    return (
+    return ( 
         <div className={styles.proyect} id={name}>
             <h3>{name}</h3>
             <div className="content">
@@ -38,7 +48,7 @@ export default function ProjectCard(props) {
                 <p>{description}</p>
             </div>
             <div className="chips">
-                {chipsForLabels(labels)}
+                {/* {chipsForLabels(lbls)} */}
             <div className="links">
 
                 <h4 onClick={sendToPage}>
@@ -54,3 +64,14 @@ export default function ProjectCard(props) {
         </div>
     )
 }
+
+
+// export async function getStaticProps(medizenLabels) {
+//     const lbls = medizenLabels
+//     return {
+//         props: {
+//             lbls
+//         }
+//     }
+//   }
+  

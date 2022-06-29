@@ -17,7 +17,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 export default function Contact() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
-  console.log(errors);
+  // console.log(errors);
 
 
   const [open, setOpen] = React.useState(false);

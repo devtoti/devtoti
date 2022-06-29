@@ -6,7 +6,7 @@ import lomadiamanteImg from '../../public/images/lomadiamante.png'
 import Image from 'next/image'
 import Divider from '@mui/material/Divider';
 
-const medizenLabels = [
+export const medizenLabels = [
   "react", "css", "figma"
 ]
 const newIconLabels = [
@@ -22,7 +22,9 @@ const xavierLabels = [
   "photoshop", "figma", "graphics"
 ]
 
-export default function Projects() {
+
+
+export default function Projects(props) {
   console.log(medizenImg)
   console.log(medizenImg.src)
   console.log(newiconImg.src)
@@ -37,7 +39,7 @@ export default function Projects() {
     name="Medizen"
     description="A beautiful App design made for meditating purposes, allowing users to customize a timer and relax while listening to ambient sounds." 
     img={medizenImg}
-    labels={medizenLabels}
+    labels={props.props}
     url="devtoti.github.io/medizen"
     repo="medizen"
     id="1"
