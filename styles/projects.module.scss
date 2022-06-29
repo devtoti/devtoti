@@ -3,6 +3,7 @@
 
 .main {
     @include mix.newSection(100%, transparent);
+    @include mix.devices(tablet);
     border: none;
 
     div[class*="projects"] {
@@ -12,7 +13,7 @@
         overflow: hidden;
         border-radius: 20px;
 
-        
+
         &:hover::before {
             content: '';
             width: inherit;
@@ -39,6 +40,7 @@
             border-radius: 16px;
             z-index: -1;
         }
+
         &::after {
             content: '';
             position: absolute;
@@ -47,9 +49,8 @@
             border-radius: 16px;
             z-index: -1;
         }
-        & * {
 
-        }
+        & * {}
     }
 
     @keyframes borderLights {
@@ -150,8 +151,8 @@
         div[class*="image"] {
             height: clamp(120px, 120px + 1vh, 250px);
             width: clamp(120px, 120px + 1vh, 250px);
-            
-            flex:1;
+
+            flex: 1;
             // filter: grayscale(1);
             // background-color: rgba(0, 0, 0, 0.501);
             // flex: 1;
@@ -171,6 +172,45 @@
     }
 }
 
-.proyect {
-    // border-color: 2px solid red;
+@media only screen and (min-width: 720px) {
+    .main {
+        width: 50%;
+        // padding: 2rem 3rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        .proyect {
+            width: 50%;
+        }
+
+        hr,
+        h3 {
+            // display: inline-block;
+            // flex-direction: column !important;
+            display: block;
+            margin: 0;
+            flex: 0 0 100%;
+        }
+
+        div[class*="content"] {
+            //    width: 50%;
+            // margin: 0 auto;
+            overflow: hidden !important;
+            padding: 0;
+
+            &:hover p{
+                // cursor: pointer;
+                color: var.$color-pr2;
+            }
+            
+        }
+        &:hover h3 {
+        color: var.$color-pr2;
+
+    }
+
+    div[class*=chips] {
+        display: inline-block !important;
+    }
+    }
 }

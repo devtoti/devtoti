@@ -1,5 +1,5 @@
-@use 'mixins' as mix;
-@use 'variables' as var;
+@use 'mixins'as mix;
+@use 'variables'as var;
 
 .main {
     @include mix.newSection(100%, var.$color-dark7);
@@ -17,10 +17,10 @@
 
         &:hover {
             transform: scale(1.2);
-            cursor:pointer;
+            cursor: pointer;
         }
     }
- 
+
 
 
     div[class*="mail"] {
@@ -35,7 +35,7 @@
             font-family: "Roboto Flex";
             text-align: center;
             background-color: var.$color-dark9;
-            box-shadow: inset 1px -1px 3px 0px rgba(0,0,0,0.4);
+            box-shadow: inset 1px -1px 3px 0px rgba(0, 0, 0, 0.4);
 
             color: var.$color-pr3;
             font-size: 1rem;
@@ -48,4 +48,17 @@
         }
     }
 
+}
+
+
+@media only screen and (min-width: 720px) {
+
+    .main {
+        width: 50%;
+        // padding: 2rem 3rem;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-content: flex-start;
+
+    }
 }
