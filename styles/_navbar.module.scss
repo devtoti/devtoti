@@ -1,79 +1,24 @@
-@use 'variables'as var;
-@use 'mixins'as mix;
-
+@import 'variables';
+@import 'mixins';
 .nav {
-    z-index: 10;
-    // position: absolute;
-    width: 100vw;
-    height: 5vh;
-    padding: 0 1rem;
-    // position: absolute;
-    position: sticky;
-    top: 0;
-    background-color: var.$color-dark8;
-    // border: 1px red solid;
-    overflow-x: none;
-    display: flex;
-    align-items: center;
+    @include flexCenter();
     justify-content: space-between;
-
-    ul {
-        list-style: none;
-        font-family: "Roboto Flex";
-        // display: none;
-
-        li {
-            font-size: 3rem;
-            padding: 2rem;
-            text-transform: uppercase;
-            
-            &:hover {
-                color: var.$color-pr1;
-                cursor: pointer;
-            }
-            &::before {
-                content: '# ';
-                font-size: 1.5rem;
-                vertical-align: middle;
-            }
-        }
-    }
+    padding: 0.5rem 1rem 0 0.5rem;
+    // background-color: $color400;
+    height: 5vh;
+    border: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    // top: 0;
+    
 
     svg {
-        height: 24px;
-        width: 24px;
+        transform: scale(1.2);
     }
-
-    // .nav-icons {
-    //     background-color: red;
-    //     display: flex;
-    //     align-items: center;
-    // }
-}
-
-.rightMenu {
-    // background-color: red;
-    display: flex;
-    align-items: center;
 }
 
 .menu {
-    @include mix.flexCenter(var.$color-pr4, #00010f, column);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    // overflow: hidden;
-
-    &::after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        background-color: #00010f;
-        height: 500vh;
-        width: 100%;
-        z-index: -1;
-        overflow: hidden;
-    }
+    
 }

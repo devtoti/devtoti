@@ -1,18 +1,10 @@
 .container {
-  height: auto;
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  z-index: -5;
+  position: relative;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  min-height: 100vh;
 }
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  justify-content: center;
-  align-items: center;
+.container section {
+  scroll-snap-align: start;
 }/*# sourceMappingURL=Home.module.css.map */

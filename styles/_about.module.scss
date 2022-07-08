@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+    // @include flexCenter();
+    @include onePage($color800, $color400);
+    padding: 0 2rem;
+    padding-top: 54px;
+    height: 100vh;
+    section {
+        @include flexCenter();
+        flex-direction: column;
+
+        h3 {
+           align-self: flex-start;
+           padding-bottom: 1rem;
+           font-size: 24px;
+        }
+        
+        p {
+            color: $color200;
+            font-size: 20px;
+            padding-bottom: 2rem;
+            padding-right: 2rem;
+        }
+        
+        button {
+            all: unset;
+            align-self: flex-start;
+            padding: 0.8rem 0.5rem;
+            border: 2px solid $color600;
+            border-radius: 8px;
+            background-color: transparent;
+        }
+}
+}
+

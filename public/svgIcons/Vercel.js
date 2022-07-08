@@ -2,9 +2,8 @@ import * as React from "react";
 
 const SvgVercel = (props) => (
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 283 64"
+    width={283}
+    height={64}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

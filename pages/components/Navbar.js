@@ -1,7 +1,8 @@
 import styles from  '../../styles/_navbar.module.scss';
 import Switch from '@mui/material/Switch';
 import SearchIcon from '@mui/icons-material/Search';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '../../public/svgIcons/MenuIcon'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useState} from 'react'
 const theme = createTheme({
@@ -10,8 +11,12 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#8AD88F',
-      darker: '#053e85',
+      main: '#F2C34B',
+      darker: '#fff',
+    },
+    unchecked: {
+      main: '#F2C34B',
+      darker: '#fff',
     },
     neutral: {
       main: '#64748B',
@@ -36,13 +41,12 @@ function openMenu() {
       </ul>
         </div>
       }
-      <MenuIcon onClick={openMenu}/>
       <div className={styles.rightMenu}>
       <ThemeProvider theme={theme}>
-      <Switch defaultChecked />
+      <Switch defaultChecked labelStyle={{color: 'red'}}/>
         </ThemeProvider>
-      {/* <SearchIcon /> */}
       </div>
+      <MenuIcon onClick={openMenu}/>
     </div>
   )
 }

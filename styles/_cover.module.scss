@@ -1,0 +1,123 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+
+    @include onePage($color700, $color500);
+
+    // background-image: url(../public/images/forest-bg.svg);
+    // background-color: $color800;
+    // -webkit-mask-image: url('../public/images/forest-bg.svg');
+    // mask-image: url('../public/images/forest-bg.svg');
+    // mask-repeat: no-repeat;
+    // mask-position: bottom;
+    // mask-size: cover;
+
+    background-color: $color700;
+    position: relative;
+    outline: 1px solid yellow;
+    overflow: hidden !important;
+// height: 100vh;
+
+    section {
+        @include flexCenter();
+        flex-direction: column;
+        height: 100% !important;
+        position: absolute;
+        padding-left: 1.5rem;
+
+        h2 {
+            font-size: 32pt;
+            color: $color-ct1;
+            z-index: 10;
+            background: -webkit-linear-gradient(#F2C94C, #F2994A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            span {
+                animation: 2s typing ease-in infinite;
+            }
+        }
+
+
+        @keyframes typing {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+
+        h4 {
+            font-size: 16px;
+            color: $color500;
+        }
+    }
+
+    svg {
+        position: absolute;
+        // bottom: -20px;
+        bottom: 5%;
+        right: 30%;
+        overflow: hidden;
+        filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
+        transform: scale(2);
+        // height: 40%;
+        // width: 100%;
+        z-index: 3;
+
+    }
+
+    .moon {
+        height: 350px;
+        aspect-ratio: 1/1;
+        // outline: 1px solid white;
+        bottom: -5%;
+        right: -30%;
+        position: absolute;
+        overflow: visible;
+        & * {
+            // @include flexCenter();
+            border-radius: 50%;
+            position: absolute;
+            transform-origin: center;
+        }
+
+        .inner {
+            aspect-ratio: 1/1;
+            // transform: translate(50%, 50%);
+            height: 100%;
+            background-color: #D9D9D9;
+            z-index: 2;
+            transform: scale(0.9);
+        }
+
+        // transform: translate(50%, 50%);
+        .outer {
+            height: 100%;
+            aspect-ratio: 1/1;
+            background-color: #D9D9D9;
+            opacity: 0.4;
+            z-index: 1;
+            animation: 5s shine infinite;
+            
+        }
+
+        @keyframes shine {
+            0% {
+                transform: scale(1);
+                transform-origin: center;
+            }
+            50% {
+                transform: scale(1.05);
+                transform-origin: center;
+            }
+            100% {
+                transform: scale(1);
+                transform-origin: center;
+            }
+        }
+    }
+}

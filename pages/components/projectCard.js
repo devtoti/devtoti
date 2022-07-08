@@ -38,12 +38,12 @@ export default function ProjectCard(props, {lbls}) {
             <h3>{name}</h3>
             <div className="content">
                 <div className="image" style={{ position: "relative" }}>
-                    <Image
+                    {/* <Image
                         src={img}
                         alt="`project ${name} illustration"
                         layout='fill'
                         objectFit='contain'
-                    />
+                    /> */}
                 </div>
                 <p>{description}</p>
             </div>

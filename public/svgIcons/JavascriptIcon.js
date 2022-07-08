@@ -3,9 +3,8 @@ import * as React from "react";
 const SvgJavascriptIcon = (props) => (
   <svg
     baseProfile="tiny"
-    height="1em"
-    viewBox="0 0 512 512"
-    width="1em"
+    height={512}
+    width={512}
     xmlSpace="preserve"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

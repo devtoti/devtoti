@@ -1,216 +1,60 @@
-@use 'mixins'as mix;
-@use 'variables'as var;
+@import 'variables';
+@import 'mixins';
 
-.main {
-    @include mix.newSection(100%, transparent);
-    @include mix.devices(tablet);
-    border: none;
+.container:not(.container .divider){
+    padding: 0rem 2rem;
+    padding-bottom: 54px;
+    background-color: $color800;
+    height: auto;
+    position: relative;
 
-    div[class*="projects"] {
-        @include mix.projectText(var.$color-dark3);
-        margin: 0.5rem 0;
-        position: relative;
-        overflow: hidden;
-        border-radius: 20px;
+    div {
+        background-color: $color700;
+        color: $color400;
+        // height: 30vh;
+        // outline: 1px solid rgba(0, 0, 0, .3);
+        margin-bottom: 1rem;
 
-
-        &:hover::before {
-            content: '';
-            width: inherit;
-            height: 200%;
-            background-image: conic-gradient(var.$color-pr3 20deg,
-                    transparent 120deg);
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            z-index: 0;
-            animation: borderLights 5s linear infinite;
-            transform: scale(1.5);
-            z-index: -1;
-        }
-
-        &:hover::after {
-            content: '';
-            position: absolute;
-            inset: 2px;
-            background-color: var.$color-dark8;
-            border-radius: 16px;
-            z-index: -1;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            inset: 2px;
-            background-color: var.$color-dark8;
-            border-radius: 16px;
-            z-index: -1;
-        }
-
-        & * {}
-    }
-
-    @keyframes borderLights {
-        0% {
-            transform: rotate(0deg)
-        }
-
-        100% {
-            transform: rotate(-360deg)
-        }
-    }
-
-    h3[data-title] {
-        @include mix.mainTitle();
-        // padding-top: 4rem;
-    }
-
-    .proyect {
-        position: relative;
-        height: auto;
-        padding-bottom: 4rem;
-
-
-        box-shadow: -5px 19px 16px -10px rgba(0, 0, 0, 0.1);
-
-
-
-        div[class*="chips"] {
-            display: flex;
-            justify-content: space-between;
-            padding-left: 0.5rem;
-            padding-bottom: 1rem;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-
-            div:not(div[class="links"]) {
-                &:hover {
-                    cursor: pointer;
-                    background-color: var.$color-pr1;
-                    transform: scale(1.1);
-                    border-color: var.$color-pr3;
-
-                    span {
-
-                        color: var.$color-pr3;
-                    }
-                }
-            }
-
-            span {
-                color: var.$color-dark3;
-            }
+        div[class*='chips'],
+        div[class*='content'] {
+            padding: 0 1rem;
+            margin-bottom: 0;
 
         }
 
-        div[class*="links"] {
-            background-color: aliceblue;
-            @include mix.flexCenter(transparent, transparent, row);
-            justify-content: flex-end;
-            margin-right: 1rem;
-            // position: absolute;
-            flex: 0.8;
-            bottom: 0;
-            right: 0;
-
-            & svg:hover {
-                transform: scale(1.2);
-                cursor: pointer;
-            }
-
-            svg {
-                margin-top: auto;
-                align-self: flex-end;
-                width: 24px;
-                height: 24px;
-                margin: 0 0.5rem;
-                fill: var.$color-sd3 !important;
-            }
-        }
-
-
-    }
-
-
-
-    div[class*="content"] {
-        @include mix.flexCenter(transparent, var.$color-dark9, row);
-        padding: 1rem;
-        box-sizing: border-box;
-        margin: 2px;
-        z-index: 3;
-
-        p {
-            margin: 0.5rem;
-        }
-
-        div[class*="image"] {
-            height: clamp(120px, 120px + 1vh, 250px);
-            width: clamp(120px, 120px + 1vh, 250px);
-
-            flex: 1;
-            // filter: grayscale(1);
-            // background-color: rgba(0, 0, 0, 0.501);
-            // flex: 1;
-        }
-
-
-    }
-
-
-}
-
-.proyect:nth-child(odd) {
-
-    div[class*="content"] {
-        flex-direction: row-reverse;
-        // float: left;
-    }
-}
-
-@media only screen and (min-width: 720px) {
-    .main {
-        width: 50%;
-        // padding: 2rem 3rem;
-        display: flex;
-        flex-wrap: wrap;
-
-        .proyect {
-            width: 50%;
-        }
-
-        hr,
         h3 {
-            // display: inline-block;
-            // flex-direction: column !important;
-            display: block;
-            margin: 0;
-            flex: 0 0 100%;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            font-weight: 300
         }
 
-        div[class*="content"] {
-            //    width: 50%;
-            // margin: 0 auto;
-            overflow: hidden !important;
-            padding: 0;
-
-            &:hover p{
-                // cursor: pointer;
-                color: var.$color-pr2;
-            }
+        div[class*='links'] {
+            // margin-bottom: 1rem;
+            @include flexCenter();
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            padding-top: 1rem;
             
+            h4 {
+                
+                padding: 0 0.5rem;
+            }
         }
-        &:hover h3 {
-        color: var.$color-pr2;
-
+        div[class*='content'] {
+            font-size: 10pt;
+            line-height: 14pt;
+            color: $color200;
+        }
     }
 
-    div[class*=chips] {
-        display: inline-block !important;
-    }
-    }
 }
+.divider {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: auto;
+     overflow: hidden;
+     line-height: 0;
+    //  filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
+ }
