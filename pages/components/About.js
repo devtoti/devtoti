@@ -32,7 +32,7 @@ export default function About() {
         <p>My name is <span>Antonio Ruiz</span> but you can call me Toti. I am a frontend developer and illustrator who enjoys building aesthetically pleasing apps and websites for better user experiences.
         </p>
         <button type="button">
-        <a href="docs/devtoti-cv-2022.pdf" target="_blank">Curriculum Vitae</a>
+        <a href="docs/devtoti-cv-2022.pdf" target="_blank">Resume</a>
         </button>
         {/* <embed src=
           "/docs/devtoti-cv-2022.pdf"
