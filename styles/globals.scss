@@ -33,14 +33,14 @@ body {
         }
     }
     div[class*='container'] {
-       padding: 0 10rem !important;
+    //    padding: 0 10rem !important;
 
         h3 {
-            font-size: clamp(16pt, 16pt + 2vw, 24pt);
+            font-size: clamp(16pt, 16pt + 2vw, 20pt);
 
         }
         p, li {
-            font-size: clamp(10pt, 10pt + 1vw, 16pt);
+            font-size: clamp(10pt, 10pt + 1vw, 14pt);
         }
     }
 }

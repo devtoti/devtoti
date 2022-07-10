@@ -82,9 +82,46 @@
   z-index: -1;
   transition: 4s translate ease-in-out;
 }
-.container:not(.container .divider) .proyect:hover h3, .container:not(.container .divider) .proyect:hover div[class*=content], .container:not(.container .divider) .proyect:hover div[class*=chips] {
+.container:not(.container .divider) .proyect:hover h3,
+.container:not(.container .divider) .proyect:hover div[class*=content],
+.container:not(.container .divider) .proyect:hover div[class*=chips] {
   transform: translateX(0.5rem);
 }
 .container:not(.container .divider) .proyect:hover div[class*=proyect] {
   border: 2px solid #F2C94C;
+}
+
+@media only screen and (min-width: 752px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+  .container div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .container div div[class*=content] {
+    flex-grow: 1;
+    padding: 1.5rem 1rem 0rem !important;
+  }
+  .container div div[class*=chips] {
+    width: 100%;
+    overflow: hidden;
+    margin-top: auto;
+  }
+  .container div div[class*=chips] div[class*=labels] {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .container div div[class*=chips] div[class*=links] {
+    border: 0;
+    padding-bottom: 0 !important;
+  }
+  .container div div[class*=chips] div[class*=links] *:hover {
+    cursor: pointer;
+    color: #9F9DC8;
+  }
 }/*# sourceMappingURL=projects.module.css.map */

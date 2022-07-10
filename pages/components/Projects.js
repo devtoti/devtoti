@@ -32,7 +32,7 @@ export default function Projects(props) {
   return (
     <>
       <div className={styles.container} id="section-two">
-        <Divider variant="middle" />
+        {/* <Divider variant="middle" /> */}
         {/* <h3 data-title> Projects</h3> */}
 
         <ProjectCard

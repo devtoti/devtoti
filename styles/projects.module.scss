@@ -76,6 +76,7 @@
             color: $color200;
             margin: 0;
             margin-top: 0.5rem;
+
             p {
                 padding-right: 0.5rem;
                 color: $color600;
@@ -105,26 +106,68 @@
         }
 
         &:hover {
-            h3, div[class*='content'], div[class*='chips'] {
+
+            h3,
+            div[class*='content'],
+            div[class*='chips'] {
                 transform: translateX(0.5rem);
             }
 
             div[class*='proyect'] {
                 border: 2px solid #F2C94C;
             }
-    
+
         }
     }
 }
 
-// .divider {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     height: auto;
-//     overflow: hidden;
-//     line-height: 0;
-// }
-//  filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
 
+@media only screen and (min-width: 752px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1em;
+
+        div {
+            // outline: 1px solid white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            // background-color: red !important;
+            // height: 100%;
+            
+            div[class*='content'] {
+                flex-grow: 1;
+                padding: 1.5rem 1rem 0rem !important;
+              
+            }
+            
+            div[class*='chips'] {
+                // background-color: red !important;
+                // position: absolute;
+                width: 100%;
+                overflow: hidden;
+                margin-top: auto;
+                
+                div[class*='labels'] {
+                    display: flex;
+                    flex-direction: row !important;
+                    // justify-content: space-between;
+                }
+
+                div[class*='links'] {
+                    border: 0;
+                    padding-bottom: 0 !important;
+                    
+                    & *:hover {
+                        cursor: pointer;
+                        color: $color200
+                    }
+                }
+            }
+        }
+
+    }
+}
