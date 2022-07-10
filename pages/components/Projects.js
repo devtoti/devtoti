@@ -40,7 +40,7 @@ export default function Projects(props) {
           description="A beautiful App design made for meditating purposes, allowing users to customize a timer and relax while listening to ambient sounds."
           img={medizenImg}
           labels={medizenLabels}
-          url="devtoti.github.io/medizen"
+          url="https://devtoti.github.io/medizen"
           repo="medizen"
           id="1"
         />
@@ -49,16 +49,16 @@ export default function Projects(props) {
             description="A complementary website made for uploading Lithium HTML files and filtering book annotations by content, chapter and colors."
             img={lomadiamanteImg}
             labels={webIllustrationsLabels}
-            url="devtoti.github.io/lithium-highlights/"
+            url="https://devtoti.github.io/lithium-highlights/"
             repo="lithium-highlights"
             id="2"
           />
           <ProjectCard
-            name="Cartoon Portrait Generator"
+            name="Cartoon Generator"
             description="React App made for customizing and downloading cartoon portraits based on user data. These portraits are meant to be used as social media profile pictures."
             img={lomadiamanteImg}
             labels={lomaDiamanteLabels}
-            url="portraitgenerator.vercel.app"
+            url="https://portraitgenerator.vercel.app"
             repo="cp-generator"
             id="3"
           />
@@ -76,7 +76,7 @@ export default function Projects(props) {
           description="Digital modeling book for self-promotion purposes. Made for professional photoshootings and casting opportunities."
           img={newiconImg}
           labels={newIconLabels}
-          url="totistyles.vercel.app"
+          url="https://totistyles.vercel.app"
           repo="totistyles"
           id="4"
         />
@@ -85,7 +85,7 @@ export default function Projects(props) {
           description="Built and designed custom maps, schemes and graphics for a startup company growing in data science and product analytics."
           img={medizenImg}
           labels={xavierLabels}
-          url="devtoti.github.io/medizen"
+          url="https://xavier-theta.vercel.app/"
           repo="xavier"
           id="5"
         />

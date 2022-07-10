@@ -17,6 +17,30 @@
         // transform: translate(1rem, -3rem);
         z-index: 30;
     }
+
+    .proyect {
+        &:nth-child(3) {
+            // outline: 2px solid #F2994A;
+            // opacity: 0.5;
+            position: relative;
+
+            &::after {
+                content: 'coming soon';
+                display: block;
+                position: absolute;
+                font-size: clamp(16pt, 16pt + 2vw, 18pt);
+                color: $color200;
+                text-transform: capitalize;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(1px);
+            }
+        }
+    }
 }
 
 .container:not(.container .divider) {
@@ -90,6 +114,8 @@
         position: relative;
         overflow: visible;
         z-index: 2;
+        // outline: 2px solid #F2994A;
+        box-shadow: 9px 9px 5px -5px rgba(0, 0, 0, 0.1), inset 11px 11px 7px -8px #ffff;
 
 
         &::before {
@@ -117,6 +143,17 @@
             }
 
         }
+
+        // dissable github icon on xavier card
+
+        &:nth-child(5) {
+            div[class*='links'] :nth-child(2) svg {
+                fill: $color900;
+                pointer-events: none;
+                cursor: default;
+                // outline: 2px solid red;
+            }
+        }
     }
 }
 
@@ -136,20 +173,20 @@
             flex-direction: column;
             // background-color: red !important;
             // height: 100%;
-            
+
             div[class*='content'] {
                 flex-grow: 1;
                 padding: 1.5rem 1rem 0rem !important;
-              
+
             }
-            
+
             div[class*='chips'] {
                 // background-color: red !important;
                 // position: absolute;
                 width: 100%;
                 overflow: hidden;
                 margin-top: auto;
-                
+
                 div[class*='labels'] {
                     display: flex;
                     flex-direction: row !important;
@@ -159,7 +196,7 @@
                 div[class*='links'] {
                     border: 0;
                     padding-bottom: 0 !important;
-                    
+
                     & *:hover {
                         cursor: pointer;
                         color: $color200
@@ -178,27 +215,34 @@
         gap: 2em;
 
         div {
-            
+
             position: relative;
             display: flex;
             flex-direction: column;
-          
-            
+
+
             div[class*='content'] {
                 flex-grow: 1;
                 padding: 1.5rem 1rem 0rem !important;
-              
+
+
             }
-            
+
+
         }
 
+
+
         .proyect {
-          
+
+
+
+
             &::before {
                 transition: 4s translate ease-in-out;
-            
+
             }
-    
+
             &:hover {
 
                 h3,
@@ -206,7 +250,7 @@
                 div[class*='chips'] {
                     transform: translateY(-0.5rem) !important;
                 }
-    
+
             }
         }
     }

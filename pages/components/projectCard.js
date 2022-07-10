@@ -15,10 +15,11 @@ export default function ProjectCard(props, { lbls }) {
     const router = useRouter()
     const sendToPage = (e) => {
         e.preventDefault()
-        window.location.assign(`https://${url}/`)
+        window.location.assign(url)
     }
     const sendToGithub = (e) => {
         e.preventDefault()
+        if (repo.includes('xavier')) return 
         window.location.assign(`https://github.com/devtoti/${repo}`)
     }
 
@@ -32,7 +33,7 @@ export default function ProjectCard(props, { lbls }) {
     const displayLables = labels => {
         // console.log(labels)
         const obj = { ...labels }
-        console.log(Object.values(obj))
+        // console.log(Object.values(obj))
         // console.log(Array.isArray(labels))
         return labels.map((el, id) => 
             <p id={id}>{el}</p>)
