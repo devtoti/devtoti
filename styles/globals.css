@@ -18,10 +18,20 @@ body {
     font-size: clamp(10pt, 10pt + 1vw, 16pt);
   }
 
+  div[class*=container] {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
   div[class*=container] h3 {
     font-size: clamp(16pt, 16pt + 2vw, 20pt);
   }
   div[class*=container] p, div[class*=container] li {
     font-size: clamp(10pt, 10pt + 1vw, 14pt);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  div[class*=container] {
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
   }
 }/*# sourceMappingURL=globals.css.map */

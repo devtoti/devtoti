@@ -8,15 +8,14 @@
     overflow-y: visible !important;
 
     &::before {
-        content: 'Projects';
+        content: '';
         display: block;
         position: absolute;
-        font-size: 16pt;
+        font-size: clamp(16pt, 16pt + 2vw, 20pt);
         color: $color300;
         // outline: 1px solid red;
-        transform: translateY(-3rem);
+        // transform: translate(1rem, -3rem);
         z-index: 30;
-        overflow-y: visible;
     }
 }
 
@@ -169,5 +168,46 @@
             }
         }
 
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+        gap: 2em;
+
+        div {
+            
+            position: relative;
+            display: flex;
+            flex-direction: column;
+          
+            
+            div[class*='content'] {
+                flex-grow: 1;
+                padding: 1.5rem 1rem 0rem !important;
+              
+            }
+            
+        }
+
+        .proyect {
+          
+            &::before {
+                transition: 4s translate ease-in-out;
+            
+            }
+    
+            &:hover {
+
+                h3,
+                div[class*='content'],
+                div[class*='chips'] {
+                    transform: translateY(-0.5rem) !important;
+                }
+    
+            }
+        }
     }
 }

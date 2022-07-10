@@ -35,6 +35,9 @@ body {
     div[class*='container'] {
     //    padding: 0 10rem !important;
 
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+
         h3 {
             font-size: clamp(16pt, 16pt + 2vw, 20pt);
 
@@ -43,4 +46,15 @@ body {
             font-size: clamp(10pt, 10pt + 1vw, 14pt);
         }
     }
+    
+}
+@media only screen and (min-width: 1280px) {
+
+    
+    div[class*='container'] {
+
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
+    }
+    
 }

@@ -3,14 +3,12 @@
   overflow-y: visible !important;
 }
 .container::before {
-  content: "Projects";
+  content: "";
   display: block;
   position: absolute;
-  font-size: 16pt;
+  font-size: clamp(16pt, 16pt + 2vw, 20pt);
   color: #8E8DBF;
-  transform: translateY(-3rem);
   z-index: 30;
-  overflow-y: visible;
 }
 
 .container:not(.container .divider) {
@@ -123,5 +121,28 @@
   .container div div[class*=chips] div[class*=links] *:hover {
     cursor: pointer;
     color: #9F9DC8;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 2em;
+  }
+  .container div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .container div div[class*=content] {
+    flex-grow: 1;
+    padding: 1.5rem 1rem 0rem !important;
+  }
+  .container .proyect::before {
+    transition: 4s translate ease-in-out;
+  }
+  .container .proyect:hover h3,
+.container .proyect:hover div[class*=content],
+.container .proyect:hover div[class*=chips] {
+    transform: translateY(-0.5rem) !important;
   }
 }/*# sourceMappingURL=projects.module.css.map */

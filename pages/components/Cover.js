@@ -14,7 +14,7 @@ export default function Cover() {
     <div className={styles.container} style={{minHeight: winHeight}}>
       <section>
         <h2><span>_</span>devtoti</h2>
-        <h4>work portfolio</h4>
+        <h4>web portfolio</h4>
       </section>
       <ForestBg />
       <div className={styles.moon}>
