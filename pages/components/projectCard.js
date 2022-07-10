@@ -6,14 +6,12 @@ import styles from '../../styles/projects.module.scss'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
 import Chip from '@mui/material/Chip';
-import {medizenLabels} from './Projects'
+import { medizenLabels } from './Projects'
+import { useState, useEffect } from 'react';
 
-
-export default function ProjectCard(props, {lbls}) {
+export default function ProjectCard(props, { lbls }) {
     const { name, description, img, url, repo, id, labels } = props
 
-    console.log(medizenLabels)
-    console.log(lbls)
     const router = useRouter()
     const sendToPage = (e) => {
         e.preventDefault()
@@ -24,40 +22,50 @@ export default function ProjectCard(props, {lbls}) {
         window.location.assign(`https://github.com/devtoti/${repo}`)
     }
 
- 
-    const chipsForLabels = labels => {
-        console.log(labels)
-        // const obj = {...labels}
-        // console.log(Object.values(obj))
+
+    const [newLabel, setNewLabel] = useState([])
+    useEffect(() => {
+        setNewLabel(labels)
+        // console.log(labels)
+    }, [])
+
+    const displayLables = labels => {
+        // console.log(labels)
+        const obj = { ...labels }
+        console.log(Object.values(obj))
         // console.log(Array.isArray(labels))
-        // return labels.map((el, id) => <Chip label={el} size="small" variant="outlined" key={id}/>)
+        return labels.map((el, id) => 
+            <p id={id}>{el}</p>)
     }
 
-    return ( 
+    return (
         <div className={styles.proyect} id={name}>
             <h3>{name}</h3>
             <div className="content">
-                <div className="image" style={{ position: "relative" }}>
-                    {/* <Image
+                {/* <div className="image" style={{ position: "relative" }}>
+                    <Image
                         src={img}
                         alt="`project ${name} illustration"
                         layout='fill'
                         objectFit='contain'
-                    /> */}
-                </div>
+                    />
+                </div> */}
                 <p>{description}</p>
             </div>
             <div className="chips">
-                {/* {chipsForLabels(lbls)} */}
-            <div className="links">
+                <div className="labels">
+                {displayLables(newLabel)}
 
-                <h4 onClick={sendToPage}>
-                    <LinkIcon />
-                </h4>
-                <h4 onClick={sendToGithub}>
-                    <GitHubIcon />
-                </h4>
-            </div>
+                </div>
+                <div className="links">
+
+                    <h4 onClick={sendToPage}>
+                        <LinkIcon />
+                    </h4>
+                    <h4 onClick={sendToGithub}>
+                        <GitHubIcon />
+                    </h4>
+                </div>
             </div>
 
 
@@ -74,4 +82,3 @@ export default function ProjectCard(props, {lbls}) {
 //         }
 //     }
 //   }
-  

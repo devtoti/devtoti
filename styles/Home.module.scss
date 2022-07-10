@@ -1,13 +1,19 @@
 @import 'variables';
 @import 'mixins';
 
-.container {
-    position: relative;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+.main {
+    //     position: relative;
     min-height: 100vh;
-    section {
-        scroll-snap-align: start;
-        // height: 100vh;
-}
+    scroll-snap-type: y mandatory;
+    
+    // overflow: scroll;
+    // overflow-y: scroll;
+
+    //    div[class*='container']
+    >section {
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always;
+        // min-height: 100vh;
+        // outline: 2px solid yellow;
+    }
 }

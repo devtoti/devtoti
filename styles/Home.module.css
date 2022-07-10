@@ -1,10 +1,9 @@
-.container {
-  position: relative;
+.main {
+  min-height: 100vh;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  min-height: 100vh;
 }
-.container section {
-  scroll-snap-align: start;
+.main > section {
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always;
 }/*# sourceMappingURL=Home.module.css.map */

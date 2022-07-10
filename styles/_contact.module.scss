@@ -3,7 +3,7 @@
 
 .container {
     @include onePage($color700, $color500);
-    height: 95vh;
+    height: 100vh;
     position: relative;
     color: #f2a44a;
     padding: 0 2rem;
@@ -47,10 +47,11 @@
 
 .contact {
     position: absolute;
-    width: 100%;
+    // @include flexCenter();
+    width: 80%;
     bottom: 10%;
     padding: 0 2rem;
-    transform: translateX(-2rem);
+    // transform: translateX(-2rem);
 
     div[id*='mail-section'] {
         @include flexCenter();
@@ -75,10 +76,18 @@
             width: 24px !important;
             height: 24px !important;
             margin-top: 3rem;
+            filter: brightness(0) saturate(100%) invert(84%) sepia(49%) saturate(1837%) hue-rotate(322deg) brightness(97%) contrast(95%);
         }
     }
 
     svg {
-        filter: brightness(0) saturate(100%) invert(84%) sepia(49%) saturate(1837%) hue-rotate(322deg) brightness(97%) contrast(95%);
+
+        &:hover {
+
+        }
+        &:active {
+            opacity: 0.5;
+        }
+
     }
 }

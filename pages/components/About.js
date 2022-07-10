@@ -24,15 +24,21 @@ export default function About() {
   }
   return (
 
-      <div className={styles.container}>
-        <section>
+    <div className={styles.container} id="section-one">
+      <div>
 
         <h3 data-title> About me
         </h3>
-        <p>My name is Antonio Ruiz but you can call me Toti. I am a frontend developer and illustrator who enjoys building aesthetically pleasing apps and websites for better user experiences.  
+        <p>My name is <span>Antonio Ruiz</span> but you can call me Toti. I am a frontend developer and illustrator who enjoys building aesthetically pleasing apps and websites for better user experiences.
         </p>
-        <button type="button">Curriculum vitae</button>
-        </section>
+        <button type="button">
+        <a href="docs/devtoti-cv-2022.pdf" target="_blank">Curriculum Vitae</a>
+        </button>
+        {/* <embed src=
+          "/docs/devtoti-cv-2022.pdf"
+          width="800"
+          height="500"> */}
       </div>
+    </div>
   )
 }

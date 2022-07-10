@@ -1,3 +1,18 @@
+.container {
+  position: relative;
+  overflow-y: visible !important;
+}
+.container::before {
+  content: "Projects";
+  display: block;
+  position: absolute;
+  font-size: 16pt;
+  color: #8E8DBF;
+  transform: translateY(-3rem);
+  z-index: 30;
+  overflow-y: visible;
+}
+
 .container:not(.container .divider) {
   padding: 0rem 2rem;
   padding-bottom: 54px;
@@ -19,6 +34,7 @@
   padding-top: 1rem;
   padding-left: 1rem;
   font-weight: 300;
+  background-color: #1C1C31;
 }
 .container:not(.container .divider) div div[class*=links] {
   display: flex;
@@ -27,7 +43,8 @@
   justify-content: center;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 .container:not(.container .divider) div div[class*=links] h4 {
   padding: 0 0.5rem;
@@ -37,13 +54,37 @@
   line-height: 14pt;
   color: #9F9DC8;
 }
-
-.divider {
+.container:not(.container .divider) div div[class*=labels] {
+  width: auto;
+  display: inline-flex;
+  font-size: 10pt;
+  line-height: 14pt;
+  color: #9F9DC8;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+.container:not(.container .divider) div div[class*=labels] p {
+  padding-right: 0.5rem;
+  color: #5E5CA3;
+}
+.container:not(.container .divider) .proyect {
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+}
+.container:not(.container .divider) .proyect::before {
+  content: "";
+  display: block;
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: auto;
-  overflow: hidden;
-  line-height: 0;
+  height: 100%;
+  background: -webkit-linear-gradient(225deg, #F2C94C, #F2994A);
+  z-index: -1;
+  transition: 4s translate ease-in-out;
+}
+.container:not(.container .divider) .proyect:hover h3, .container:not(.container .divider) .proyect:hover div[class*=content], .container:not(.container .divider) .proyect:hover div[class*=chips] {
+  transform: translateX(0.5rem);
+}
+.container:not(.container .divider) .proyect:hover div[class*=proyect] {
+  border: 2px solid #F2C94C;
 }/*# sourceMappingURL=projects.module.css.map */

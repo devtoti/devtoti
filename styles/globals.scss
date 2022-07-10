@@ -6,9 +6,41 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    
 }
 
 html, body {
    background-color: $color700;
+   
+}
+
+body {
+
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    div[id="__next"] {
+       
+    }
+}
+
+@media only screen and (min-width: 754px) {
+
+    * {
+        li {
+
+            font-size: clamp(10pt, 10pt + 1vw, 16pt);
+        }
+    }
+    div[class*='container'] {
+       padding: 0 10rem !important;
+
+        h3 {
+            font-size: clamp(16pt, 16pt + 2vw, 24pt);
+
+        }
+        p, li {
+            font-size: clamp(10pt, 10pt + 1vw, 16pt);
+        }
+    }
 }
