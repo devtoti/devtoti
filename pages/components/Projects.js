@@ -41,7 +41,7 @@ export default function Projects(props) {
           img={medizenImg}
           labels={medizenLabels}
           url="https://devtoti.github.io/medizen"
-          repo="medizen"
+          repo="medizen/tree/gh-pages"
           id="1"
         />
           <ProjectCard
@@ -50,7 +50,7 @@ export default function Projects(props) {
             img={lomadiamanteImg}
             labels={webIllustrationsLabels}
             url="https://devtoti.github.io/lithium-highlights/"
-            repo="lithium-highlights"
+            repo="lithium-highlights/tree/grid-styling"
             id="2"
           />
           <ProjectCard

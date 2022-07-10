@@ -20,7 +20,7 @@ export default function ProjectCard(props, { lbls }) {
     const sendToGithub = (e) => {
         e.preventDefault()
         if (repo.includes('xavier')) return 
-        window.location.assign(`https://github.com/devtoti/${repo}`)
+        window.open(`https://github.com/devtoti/${repo}`, "_blank")
     }
 
 
