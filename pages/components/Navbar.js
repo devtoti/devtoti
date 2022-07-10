@@ -45,7 +45,7 @@ const navigateTo = section => {
     <div className={styles.nav}>
       {openDialog && 
         <div className={styles.menu} id="ul-navigation" style={{height: winHeight}}>
-          <CloseIcon/>
+          <CloseIcon onClick={() => setOpenDialog(a=>!a)}/>
       <ul onClick={(e) => navigateTo(e)}>
         <Link href="#section-one">
         <li>About</li>
@@ -63,9 +63,9 @@ const navigateTo = section => {
         </div>
       }
       <div className={styles.rightMenu}>
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
       <Switch defaultChecked labelStyle={{color: 'red'}}/>
-        </ThemeProvider>
+        </ThemeProvider> */}
       </div>
       <MenuIcon onClick={openMenu}/>
     </div>
