@@ -15,7 +15,7 @@ export default function ProjectCard(props, { lbls }) {
     const router = useRouter()
     const sendToPage = (e) => {
         e.preventDefault()
-        window.location.assign(url)
+        window.open(url, "_blank")
     }
     const sendToGithub = (e) => {
         e.preventDefault()

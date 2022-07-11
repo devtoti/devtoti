@@ -34,10 +34,7 @@ export default function About() {
         <button type="button">
         <a href="docs/devtoti-cv-2022.pdf" target="_blank">Resume</a>
         </button>
-        {/* <embed src=
-          "/docs/devtoti-cv-2022.pdf"
-          width="800"
-          height="500"> */}
+      
       </div>
     </div>
   )
