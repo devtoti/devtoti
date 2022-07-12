@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Welcome to my Web Development Portfolio
 
-First, run the development server:
+My name is Antonio Ruiz and I am a frontend developer based in Mexico City. I enjoy building projects and applications that allow me to understand better how the web works and how to properly interact with custom made user interfaces. 
+If you would like to know more about me, make sure to check out my latest projects and self made illustrations and designs.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+**Click here to visit my portfolio!** [http://devtoti.vercel.app](http://devtoti.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Social Media
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Below you will find some links for my different social media profiles.
+Do not hessitate to visit my other works and complementary skills!
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [LinkedIn](https://www.linkedin.com/in/devtoti/) - My fast-growing professional network. 
+- [Dribbble](https://dribbble.com/totisketches) - Illustration & design concepts.
+- [Fiverr](https://fiverr.com/totisketches) - My freelancing career as a sketcher and illustrator.
+- [CodeSandbox] - Small and experimental frontend projects.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you would like to send me a direct message, you can do so by email. I will be more than happy to talk with you!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+toti.webdev@gmail.com
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Last update: 12 July, 2022
