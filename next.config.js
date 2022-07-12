@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   reactStrictMode: true,
-=======
-  reactStrictMode: false,
->>>>>>> design-3.0
 }
 
 const path = require('path')
