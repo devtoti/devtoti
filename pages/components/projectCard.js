@@ -36,7 +36,7 @@ export default function ProjectCard(props, { lbls }) {
         // console.log(Object.values(obj))
         // console.log(Array.isArray(labels))
         return labels.map((el, id) => 
-            <p id={id}>{el}</p>)
+            <p id={id} key={id}>{el}</p>)
     }
 
     return (
