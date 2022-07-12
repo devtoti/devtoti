@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sources":["Home.module.scss","Home.module.css"],"names":[],"mappings":"AAGA;EACE,YAAA;EAIA,kFAAA;EACA,4BAAA;EACA,2BAAA;EACA,4BAAA;EACA,sBAAA;EACA,gBAAA;EACA,WAAA;ACLF;;ADaA;EACE,aAAA;EACA,OAAA;EACA,eAAA;EAEA,uBAAA;EACA,mBAAA;ACXF","file":"Home.module.css"}
-=======
 {"version":3,"sources":["Home.module.scss","Home.module.css"],"names":[],"mappings":"AAGA;EAEI,iBAAA;EACA,iCAAA;MAAA,6BAAA;ACHJ;ADSI;EACI,mCAAA;EACA,wBAAA;ACPR","file":"Home.module.css"}
->>>>>>> design-3.0

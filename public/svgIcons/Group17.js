@@ -2,14 +2,8 @@ import * as React from "react";
 
 const SvgGroup17 = (props) => (
   <svg
-<<<<<<< HEAD
-    width="1em"
-    height="1em"
-    viewBox="0 0 610 108"
-=======
     width={610}
     height={108}
->>>>>>> design-3.0
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

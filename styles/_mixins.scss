@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-// @mixin desktop() {
-//     @media (max-width: 600px) {
-//         @content;
-//     }
-// }
-
-@mixin flexCenter($color, $bgcolor: none, $direction: column) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: center;
-    justify-content: center;
-    color: $color;
-    background-color: $bgcolor;
-}
-
-
-@mixin newSection($section-height: 100%, $section-color) {
-    width: 95vw;
-    border-radius: 15px;
-    height: $section-height;
-    margin: 0 auto;
-    background-color: $section-color;
-    border: 0;
-    height: auto;
-    margin-bottom: 3rem;
-}
-
-@mixin mainText() {
-    font-family: 'Roboto Flex', sans-serif;
-    margin: 0 1rem;
-    padding-top: 2rem;
-}
-
-@mixin mainTitle() {
-    font-family: 'Roboto Flex', sans-serif;
-    margin: 0 auto;
-    padding-top: 1rem;
-    text-align: center;
-}
-
-@mixin projectText($color) {
-    h3{
-        padding: 1rem 0 0.5rem 0;
-        text-align: center;
-        // color: red;
-        color: $color;
-        font-weight: 500;
-        letter-spacing: 0.1ch;
-    } 
-    
-    p {
-        padding-top: 0.5rem;
-        // font-size: 1.1rem;
-        width: 22ch;
-        float: right;
-        color: $color;
-    }
-}
-=======
 @mixin flexCenter() {
     display: flex;
     flex-direction: row;
@@ -87,4 +27,3 @@
     //     height: 100vh;
     // }
 }
->>>>>>> design-3.0
