@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use 'variables'as var;
 @use 'mixins'as mix;
 
@@ -76,4 +77,65 @@ body {
 
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   }
+=======
+@import 'variables';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+    // overflow-x: hidden;
+    
+}
+
+html, body {
+   background-color: $color700;
+   
+}
+
+body {
+
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    div[id="__next"] {
+       
+    }
+}
+
+@media only screen and (min-width: 754px) {
+
+    * {
+        li {
+
+            font-size: clamp(10pt, 10pt + 1vw, 16pt);
+        }
+    }
+    div[class*='container'] {
+    //    padding: 0 10rem !important;
+
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+
+        h3 {
+            font-size: clamp(16pt, 16pt + 2vw, 20pt);
+
+        }
+        p, li {
+            font-size: clamp(10pt, 10pt + 1vw, 14pt);
+        }
+    }
+    
+}
+@media only screen and (min-width: 1280px) {
+
+    
+    div[class*='container'] {
+
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
+    }
+    
+>>>>>>> design-3.0
 }

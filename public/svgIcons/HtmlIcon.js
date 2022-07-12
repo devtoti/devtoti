@@ -2,9 +2,14 @@ import * as React from "react";
 
 const SvgHtmlIcon = (props) => (
   <svg
+<<<<<<< HEAD
     height="1em"
     viewBox="0 0 56.693 56.693"
     width="1em"
+=======
+    height={56.693}
+    width={56.693}
+>>>>>>> design-3.0
     xmlSpace="preserve"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

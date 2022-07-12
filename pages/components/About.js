@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import manIllustration from '../../public/images/toti2.png'
 import codingGif from '../../public/images/coding.gif'
+<<<<<<< HEAD
 import styles from '../../styles/about.module.scss'
+=======
+import styles from '../../styles/_about.module.scss'
+>>>>>>> design-3.0
 import NextIcon from '../../public/svgIcons/NextIcon'
 import ReactIcon from '../../public/svgIcons/ReactIcon'
 import SassIcon from '../../public/svgIcons/SassIcon'
@@ -23,6 +27,7 @@ export default function About() {
     // console.log(section)
   }
   return (
+<<<<<<< HEAD
     <div className={styles.main}>
       <div className={styles.illustration}>
 
@@ -81,6 +86,20 @@ export default function About() {
 
           </div>
         }
+=======
+
+    <div className={styles.container} id="section-one">
+      <div>
+
+        <h3 data-title> About me
+        </h3>
+        <p>My name is <span>Antonio Ruiz</span> but you can call me Toti. I am a frontend developer and illustrator who enjoys building aesthetically pleasing apps and websites for better user experiences.
+        </p>
+        <button type="button">
+        <a href="docs/devtoti-cv-2022.pdf" target="_blank">Resume</a>
+        </button>
+      
+>>>>>>> design-3.0
       </div>
     </div>
   )

@@ -3,9 +3,14 @@ import * as React from "react";
 const SvgNextIcon = (props) => (
   <svg
     fill="none"
+<<<<<<< HEAD
     height="1em"
     viewBox="0 0 24 24"
     width="1em"
+=======
+    height={24}
+    width={24}
+>>>>>>> design-3.0
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >

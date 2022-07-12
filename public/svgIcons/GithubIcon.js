@@ -2,12 +2,20 @@ import * as React from "react";
 
 const SvgGithubIcon = (props) => (
   <svg
+<<<<<<< HEAD
     height="1em"
     style={{
       enableBackground: "new 0 0 512 512",
     }}
     viewBox="0 0 512 512"
     width="1em"
+=======
+    height={512}
+    style={{
+      enableBackground: "new 0 0 512 512",
+    }}
+    width={512}
+>>>>>>> design-3.0
     xmlSpace="preserve"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

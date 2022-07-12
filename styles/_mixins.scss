@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @mixin desktop() {
 //     @media (max-width: 600px) {
 //         @content;
@@ -56,3 +57,34 @@
         color: $color;
     }
 }
+=======
+@mixin flexCenter() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@mixin moon($height, $width, $color) {
+    min-height: $height;
+    min-width: $width;
+    background-color: $color;
+    border-radius: 50%;
+}
+
+@mixin onePage($bgcolor, $txtcolor) {
+    // height: 100vh;
+    // width: 100vw;
+    color: $txtcolor;
+    background-color: $bgcolor;
+    font-family: 'Roboto Flex';
+   
+
+    // section {
+    //     // @include flexCenter();
+    //     scroll-snap-align: start;
+    //     height: 100vh;
+    // }
+}
+>>>>>>> design-3.0

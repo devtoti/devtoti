@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main {
   width: 95vw;
   border-radius: 15px;
@@ -112,10 +113,69 @@
 }
 .main .proyect div[class*=links] {
   background-color: aliceblue;
+=======
+.container {
+  position: relative;
+  overflow-y: visible !important;
+}
+.container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  font-size: clamp(16pt, 16pt + 2vw, 20pt);
+  color: #8E8DBF;
+  z-index: 30;
+}
+.container .proyect:nth-child(3) {
+  position: relative;
+}
+.container .proyect:nth-child(3)::after {
+  content: "coming soon";
+  display: block;
+  position: absolute;
+  font-size: clamp(16pt, 16pt + 2vw, 18pt);
+  color: #9F9DC8;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+
+.container:not(.container .divider) {
+  padding: 0rem 2rem;
+  padding-bottom: 54px;
+  background-color: #131221;
+  height: auto;
+  position: relative;
+}
+.container:not(.container .divider) div {
+  background-color: #1C1C31;
+  color: #7E7CB6;
+  margin-bottom: 1rem;
+}
+.container:not(.container .divider) div div[class*=chips],
+.container:not(.container .divider) div div[class*=content] {
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+.container:not(.container .divider) div h3 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-weight: 300;
+  background-color: #1C1C31;
+}
+.container:not(.container .divider) div div[class*=links] {
+>>>>>>> design-3.0
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   color: transparent;
   background-color: transparent;
   justify-content: flex-end;
@@ -159,4 +219,118 @@
 
 .proyect:nth-child(odd) div[class*=content] {
   flex-direction: row-reverse;
+=======
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+.container:not(.container .divider) div div[class*=links] h4 {
+  padding: 0 0.5rem;
+}
+.container:not(.container .divider) div div[class*=content] {
+  font-size: 10pt;
+  line-height: 14pt;
+  color: #9F9DC8;
+}
+.container:not(.container .divider) div div[class*=labels] {
+  width: auto;
+  display: inline-flex;
+  font-size: 10pt;
+  line-height: 14pt;
+  color: #9F9DC8;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+.container:not(.container .divider) div div[class*=labels] p {
+  padding-right: 0.5rem;
+  color: #5E5CA3;
+}
+.container:not(.container .divider) .proyect {
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+  box-shadow: 9px 9px 5px -5px rgba(0, 0, 0, 0.1), inset 11px 11px 7px -8px white;
+}
+.container:not(.container .divider) .proyect::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(225deg, #F2C94C, #F2994A);
+  z-index: -1;
+  transition: 4s translate ease-in-out;
+}
+.container:not(.container .divider) .proyect:hover h3,
+.container:not(.container .divider) .proyect:hover div[class*=content],
+.container:not(.container .divider) .proyect:hover div[class*=chips] {
+  transform: translateX(0.5rem);
+}
+.container:not(.container .divider) .proyect:hover div[class*=proyect] {
+  border: 2px solid #F2C94C;
+}
+.container:not(.container .divider) .proyect:nth-child(5) div[class*=links] :nth-child(2) svg {
+  fill: #090910;
+  pointer-events: none;
+  cursor: default;
+}
+
+@media only screen and (min-width: 752px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+  .container div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .container div div[class*=content] {
+    flex-grow: 1;
+    padding: 1.5rem 1rem 0rem !important;
+  }
+  .container div div[class*=chips] {
+    width: 100%;
+    overflow: hidden;
+    margin-top: auto;
+  }
+  .container div div[class*=chips] div[class*=labels] {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .container div div[class*=chips] div[class*=links] {
+    border: 0;
+    padding-bottom: 0 !important;
+  }
+  .container div div[class*=chips] div[class*=links] *:hover {
+    cursor: pointer;
+    color: #9F9DC8;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 2em;
+  }
+  .container div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .container div div[class*=content] {
+    flex-grow: 1;
+    padding: 1.5rem 1rem 0rem !important;
+  }
+  .container .proyect::before {
+    transition: 4s translate ease-in-out;
+  }
+  .container .proyect:hover h3,
+.container .proyect:hover div[class*=content],
+.container .proyect:hover div[class*=chips] {
+    transform: translateY(-0.5rem) !important;
+  }
+>>>>>>> design-3.0
 }/*# sourceMappingURL=projects.module.css.map */

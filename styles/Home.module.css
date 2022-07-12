@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   height: auto;
   background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
@@ -15,4 +16,14 @@
   padding: 2rem 0;
   justify-content: center;
   align-items: center;
+=======
+.main {
+  min-height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+.main > section {
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always;
+>>>>>>> design-3.0
 }/*# sourceMappingURL=Home.module.css.map */
