@@ -32,7 +32,7 @@ const [winHeight, setWinHeight] = useState(0)
 
 useEffect(()=> {
   setWinHeight(window.innerHeight)
-})
+}, [])
 function openMenu() {
   setOpenDialog((a)=> !a)
 }
