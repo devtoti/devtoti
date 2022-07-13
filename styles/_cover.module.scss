@@ -17,7 +17,7 @@
     position: relative;
     // outline: 1px solid yellow;
     overflow: hidden !important;
-// height: 100vh;
+    // height: 100vh;
 
     section {
         @include flexCenter();
@@ -25,6 +25,7 @@
         height: 100% !important;
         position: absolute;
         padding-left: 1.5rem;
+        pointer-events: none;
 
         h2 {
             font-size: clamp(32pt, 5vw, 72pt);
@@ -46,6 +47,7 @@
             0% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0;
             }
@@ -70,17 +72,20 @@
         // height: 40%;
         // width: 100%;
         z-index: 3;
-
+        
     }
-
+    
     .moon {
-        height: 350px;
+        height: 500px;
         aspect-ratio: 1/1;
+        cursor: grab;
         // outline: 1px solid white;
-        bottom: -5%;
+        bottom: -10%;
         right: -30%;
         position: absolute;
         overflow: visible;
+        filter: drop-shadow(0 0 0.75rem #fff1cc);
+
         & * {
             // @include flexCenter();
             border-radius: 50%;
@@ -93,6 +98,8 @@
             // transform: translate(50%, 50%);
             height: 100%;
             background-color: #D9D9D9;
+            // background-image: url('../public/images/moon4.png');
+            // background-size: cover;
             z-index: 2;
             transform: scale(0.9);
         }
@@ -105,7 +112,7 @@
             opacity: 0.4;
             z-index: 1;
             animation: 5s shine infinite;
-            
+
         }
 
         @keyframes shine {
@@ -113,10 +120,12 @@
                 transform: scale(1);
                 transform-origin: center;
             }
+
             50% {
                 transform: scale(1.05);
                 transform-origin: center;
             }
+
             100% {
                 transform: scale(1);
                 transform-origin: center;
@@ -126,28 +135,36 @@
 }
 
 @media only screen and (min-width: 752px) {
-    
+
     .container {
         section {
             right: 10rem;
 
         }
+
         svg {
             bottom: 8%;
             right: 30%;
             pointer-events: none;
         }
+
         .moon {
-            height: clamp(350px, 350px + 10vw, 1200px);
-           left: 0;
+            height: 350px;
+            width: 350px;
+            // height: clamp(350px, 350px + 10vw, 1200px);
+            // width: clamp(350px, 350px + 10vw, 1200px);
+            left: 0;
+            border-radius: 50%;
+            // background-color: #D9D9D9;
 
             & * {
                 // @include flexCenter();
                 border-radius: 50%;
                 position: absolute;
                 transform-origin: center;
+
             }
-    
+
             .inner {
                 aspect-ratio: 1/1;
                 // transform: translate(50%, 50%);
@@ -155,22 +172,24 @@
                 background-color: #D9D9D9;
                 z-index: 2;
                 transform: scale(0.9);
+                pointer-events: none;
             }
-    
+
             // transform: translate(50%, 50%);
             .outer {
+                pointer-events: none;
                 height: 100%;
                 aspect-ratio: 1/1;
                 background-color: #D9D9D9;
                 opacity: 0.4;
                 z-index: 1;
                 animation: 5s shine infinite;
-                
+
             }
+        }
+
+
     }
-
-
-}
 }
 
 @media only screen and (min-width: 1280px) {
@@ -179,37 +198,40 @@
             right: 20rem;
 
         }
+
         svg {
             bottom: 15%;
             right: 20%;
             pointer-events: none;
         }
-        .moon {
-            height: clamp(350px, 350px + 20vw, 1200px) !important;
 
+        .moon {
+            // height: clamp(350px, 350px + 20vw, 1200px) !important;
+            height: 650px !important;
+            aspect-ratio: 1/1;
             & * {
                 left: -20%;
-              
+
             }
-    
+
             .inner {
-            
+
                 background-color: #D9D9D9;
                 transform: scale(0.9);
-                
+
                 &:hover {
                     background-color: $color200;
-                    cursor:grab;
+                    cursor: grab;
 
                 }
             }
-    
+
             .outer {
                 background-color: #D9D9D9;
                 opacity: 0.4;
                 animation: 4s shine infinite;
-                
+
             }
         }
-}
+    }
 }
