@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import styles from '../../styles/_cover.module.scss'
 import ForestBg from '../../public/svg/ForestBg'
-import {handleMLeave, handleMUp, changeSize } from './functions'
 import Moon4 from "../../public/images/moon4.png";
 export default function Cover() {
   const [objStyle, setObjStyle] = useState({})
