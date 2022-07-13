@@ -4,22 +4,24 @@ import ForestBg from '../../public/svg/ForestBg'
 import {handleMLeave, handleMUp, changeSize } from './functions'
 import Moon4 from "../../public/images/moon4.png";
 export default function Cover() {
+  const [objStyle, setObjStyle] = useState({})
+  const [winHeight, setWinHeight] = useState(0)
+  const [winWidth, setWinWidth] = useState(0)
   const [objCoords, setObjCoords] = useState({});
   const [isDragging, setIsDragging] = useState(false);
   const [percentage, setPercentage] = useState(0);
-  const [objStyle, setObjStyle] = useState({
-    position: "absolute",
-    height: "650px",
-    width: "650px",
-  });
-
-  const [winHeight, setWinHeight] = useState(0)
   useEffect(() => {
     // window is accessible here.
     setWinHeight(window.innerHeight);
-    // console.log("window.innerHeight", window.innerHeight);
+    setWinWidth(window.innerWidth);
+    setObjStyle({
+      position: "absolute",
+      height: window.innerHeight > 1000 ? "650px" : "300px",
+      width: window.innerWidth > 1000 ? "650px" : "300px",
+    })
   }, []);
-
+  
+  
   const handleDrag = (event) => {
     const elem = event.target;
     let windowWidth = window.innerWidth;
@@ -66,7 +68,8 @@ export default function Cover() {
         onMouseUp={handleMUp}
         style={objStyle}
       >
-        <div className={styles.outer}></div>
+        <div className={styles.outer}
+         ></div>
         <div className={styles.inner}></div>
       </div>
     </div>
