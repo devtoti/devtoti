@@ -103,18 +103,31 @@ export default function Home() {
 
 
 
-
+  const SvgPath = () => {
+    return (
+            <svg viewBox="0 0 311 3685" fill="none" preserveAspectRatio='xMaxYMax meet' className={styles.linePath}>
+              <path d="M0 0H33V3700" stroke="url(#paint0_linear_56_44)" strokeWidth={winHeight > 1000 ? "20" : "10"} ref={pathRef}
+                style={{
+                  strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
+                  strokeDashoffset: currStrokeOffset,
+                }}
+              />
+              <defs>
+                <linearGradient id="paint0_linear_56_44" x1="16.5" y1="0" x2="16.5" y2="3700" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F2994A" />
+                  <stop offset="0.0001" stop-color="#D9D9D9" />
+                  <stop offset="0.723958" stop-color="#F2BE4B" />
+                  <stop offset="1" stop-color="#F2AC4B" />
+                </linearGradient>
+              </defs>
+              </svg>
+  
+    )
+  }
+  
 
   return (
     <>
-      <svg viewBox="0 0 311 3685" fill="none" preserveAspectRatio='xMidYMax meet' className={styles.linePath}>
-        <path d="M135.209 0V751.511L13 873.594H193.308L272.443 952.647V1358.92L13 1618.1V2399.63H272.443V3269.72H135.209L189.802 3324.26L135.209 3378.8L189.802 3433.33L135.209 3487.87H13V3680H306V3617.96" stroke="#F3C16B" strokeWidth="10" ref={pathRef}
-          style={{
-            strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
-            strokeDashoffset: currStrokeOffset,
-          }}
-        />
-      </svg>
 
       <div className={styles.main} style={{ height: "auto" }}>
         <Head>
@@ -129,8 +142,9 @@ export default function Home() {
           </head>
         </Head>
         <Navbar />
-
+    <SvgPath/>
         <section>
+
           <Cover />
         </section>
         <section>
@@ -148,3 +162,4 @@ export default function Home() {
   )
 
 }
+
