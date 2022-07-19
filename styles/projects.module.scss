@@ -116,7 +116,7 @@
         z-index: 2;
         // outline: 2px solid #F2994A;
         box-shadow: 9px 9px 5px -5px rgba(0, 0, 0, 0.1), inset 11px 11px 7px -8px #ffff;
-
+        // height: clamp(a 200px + 10vh, 500px);
 
         &::before {
             content: '';

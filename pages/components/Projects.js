@@ -21,6 +21,9 @@ const webIllustrationsLabels = [
 const xavierLabels = [
   "photoshop", "figma", "graphics"
 ]
+const wordleLabels = [
+  "Nextjs", "Css", "JavaScript"
+]
 
 
 
@@ -88,6 +91,15 @@ export default function Projects(props) {
           url="https://xavier-theta.vercel.app/"
           repo="xavier"
           id="5"
+        />
+        <ProjectCard
+          name="Wordle Tribute"
+          description="Wordle game built from scratch in Nextjs with a slight twist. Custom design and responsiveness for mobile and PC."
+          img={medizenImg}
+          labels={wordleLabels}
+          url="https://wordle-izwzssqqy-devtoti.vercel.app/"
+          repo="wordle"
+          id="6"
         />
 
       </div>

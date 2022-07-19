@@ -28,7 +28,7 @@ export default function ProjectCard(props, { lbls }) {
     useEffect(() => {
         setNewLabel(labels)
         // console.log(labels)
-    }, [])
+    }, [labels])
 
     const displayLables = labels => {
         // console.log(labels)
