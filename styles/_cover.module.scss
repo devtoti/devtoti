@@ -64,7 +64,7 @@
     svg {
         position: absolute;
         // bottom: -20px;
-        bottom: 5%;
+        bottom: 0;
         right: 30%;
         overflow: hidden;
         filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
@@ -72,19 +72,21 @@
         // height: 40%;
         // width: 100%;
         z-index: 3;
-        
+
     }
-    
+
     .moon {
         height: 500px;
         aspect-ratio: 1/1;
         cursor: grab;
         // outline: 1px solid white;
-        bottom: -10%;
+        bottom: 5%;
         right: -30%;
         position: absolute;
         overflow: visible;
         filter: drop-shadow(0 0 0.75rem #fff1cc);
+        // outline: 1px solid red;
+        // z-index: 100;
 
         & * {
             // @include flexCenter();
@@ -143,15 +145,13 @@
         }
 
         svg {
-            bottom: 8%;
+            bottom: 5%;
             right: 30%;
             pointer-events: none;
         }
 
         .moon {
-            height: 350px;
-            width: 350px;
-            // height: clamp(350px, 350px + 10vw, 1200px);
+            height: clamp(250px, 250px + 10vw, 300px);
             // width: clamp(350px, 350px + 10vw, 1200px);
             left: 0;
             border-radius: 50%;
@@ -200,15 +200,17 @@
         }
 
         svg {
-            bottom: 25%;
+            bottom: -5%;
             right: 20%;
             pointer-events: none;
         }
 
         .moon {
-            // height: clamp(350px, 350px + 20vw, 1200px) !important;
+            height: clamp(350px, 350px + 20vw, 400px) !important;
             // height: 650px !important;
             aspect-ratio: 1/1;
+            bottom: 5%;
+            left: 5%;
             & * {
                 // left: -20%;
 
