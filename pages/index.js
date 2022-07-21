@@ -91,7 +91,7 @@ export default function Home() {
   const SvgPath = () => {
     return (
       <svg viewBox="0 0 1509 5" fill="none" preserveAspectRatio='xMaxYMin meet' className={styles.linePath}>
-        <path d="M0 2.5H1509" stroke="url(#paint0_linear_67_21)" stroke-miterlimit="1.41421" strokeWidth={winHeight > 1000 ? "5" : "3"} ref={pathRef}
+        <path d="M0 2.5H1509" stroke="url(#paint0_linear_67_21)" stroke-miterlimit="1.41421" strokeWidth={winHeight > 768 ? "10" : "20"} ref={pathRef}
           style={{
             strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
             strokeDashoffset: currStrokeOffset,

@@ -4,50 +4,47 @@
 .nav {
     @include flexCenter();
     justify-content: space-between;
-    padding: 0.5rem 1rem 0 0.5rem;
+    // padding: 0.5rem 1rem 0 0.5rem;
     // background-color: $color400;
-    height: 5vh;
+    // height: 5vh;
     border: transparent;
-    // position: absolute;
+    position: fixed;
     width: 100%;
-    z-index: 9;
+    z-index: 20;
     overflow: hidden;
     // top: 0;
 
-
+    //hamburger
     svg {
         transform: scale(1.2);
         color: #f2a44a;
         cursor: pointer;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        // padding: 0.5rem 1rem 0 0.5rem;
     }
 
     div[id*='ul-navigation'] {
-        position: absolute;
-        width: 85vw;
-        background-color: $color700;
+
+        height: 100vh;
+        width: 100vw !important;
+        // background-color: $color700;
         z-index: 11;
         top: 0;
         left: 0;
         overflow: visible;
+        outline: 1px solid red;
+        display: flex;
 
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0vh;
-            width: 15vw;
-            height: 100vh;
-            transform: translateX(15vw);
-            background-color: $color900;
-            opacity: 0.5;
-            pointer-events: none
-        }
 
+
+        //close icon
         svg {
             position: absolute;
             left: 0.5em;
             top: 0.5rem;
+            z-index: 20;
 
 
             &:hover {
@@ -73,25 +70,42 @@
         ul {
             @include flexCenter();
             flex-direction: column;
-            // justify-content: space-evenly;
             padding: 5rem 0;
             height: 100%;
-            
+            width: 100%;
+            z-index: 11;
+            position: absolute;
+            top: 0;
+            // width: 100vw;
+            height: 100vh;
+            background-color: $color700;
+            counter-reset: section;
+            opacity: 1;
+
             li {
-                all:unset;
+                all: unset;
                 font-size: clamp(16pt, 16pt + 2vw, 24pt);
                 color: white;
                 opacity: 0.5;
-                // outline: 1px solid green;
                 text-transform: uppercase;
-                width: 100%;
+                width: 50%;
                 text-align: center;
                 flex: 1;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
+
+                &::before {
+                    counter-increment: section;
+                    content: '0'counter(section);
+                    color: $color100;
+                    font-weight: 600;
+                    padding-right: 1rem;
+                    font-size: 2.5rem;
+                }
+
                 &:hover {
-                    cursor:pointer;
+                    cursor: pointer;
                     font-weight: 600;
                     opacity: 1;
                     background: -webkit-linear-gradient(#F2C94C, #F2994A);
@@ -102,6 +116,58 @@
         }
     }
 
+    .menu {
+        z-index: 20;
+        // outline: 1px solid green;
+     
+
+        .dialogRight {
+            display: none;
+        }
+    }
 }
 
-.menu {}
+@media only screen and (min-width: 767px) {
+    .nav {
+
+
+        svg {
+            transform: scale(1.6);
+        }
+
+        div[id*='ul-navigation'] {
+
+            ul {
+                width: 50%;
+            }
+
+            //close icon
+            svg {
+                left: 1em;
+                top: 1rem;
+            }
+        }
+    }
+
+    .menu {
+        // width: 100vw !important;
+        position: relative;
+
+    }
+    .dialog {
+        // display: block;
+        // position: absolute;
+        // top: 0;
+        // height: 100vh;
+        // right: 0;
+        width: 50vw;
+        // background-color: red;
+        opacity: 0.8;
+        z-index: 20;
+        background-color: $color800;
+        opacity: 0.8;
+        transform: translateX(100%);
+        // outline: 1px solid green;
+
+    }
+}

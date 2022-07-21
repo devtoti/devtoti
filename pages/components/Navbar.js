@@ -44,7 +44,7 @@ const navigateTo = section => {
   return (
     <div className={styles.nav}>
       {openDialog && 
-        <div className={styles.menu} id="ul-navigation" style={{height: winHeight}}>
+        <div className={styles.menu} id="ul-navigation" style={{height: winHeight, width: "50vw"}}>
           <CloseIcon onClick={() => setOpenDialog(a=>!a)}/>
       <ul onClick={(e) => navigateTo(e)}>
         <Link href="#section-one">
@@ -60,6 +60,7 @@ const navigateTo = section => {
         <li>Contact</li>
         </Link>
       </ul>
+      <div className={styles.dialog} onClick={() => setOpenDialog(a=>!a)}></div>
         </div>
       }
       <div className={styles.rightMenu}>

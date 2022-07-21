@@ -28,7 +28,7 @@
         pointer-events: none;
 
         h2 {
-            font-size: clamp(32pt, 5vw, 72pt);
+            font-size: clamp(32pt, 32pt + 3vw, 96pt);
             // font-size: clamp(32px, 2vw, 48pt);
             color: $color-ct1;
             z-index: 10;
@@ -53,25 +53,39 @@
             }
         }
 
-
         h4 {
-            font-size: clamp(14pt, 3vw, 28pt);
-            color: $color500;
+            font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
+            color: $color200;
             z-index: 10;
         }
+
+        h5 {
+            font-size: clamp(0.8rem, 0.4rem + 3vw, 1.6rem);
+            color: $color200;
+            margin-top: 0.5rem;
+            z-index: 10;
+        }
+
     }
 
+    //forest svg
     svg {
         position: absolute;
         // bottom: -20px;
         bottom: 0;
-        right: 30%;
+        right: 0%;
         overflow: hidden;
         filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
-        transform: scale(2);
+        // transform: scale(1);
         // height: 40%;
-        // width: 100%;
+        transform: scaleY(1.5);
         z-index: 3;
+
+        path {
+            width: 100vw;
+            // right: 0;
+
+        }
 
     }
 
@@ -136,104 +150,116 @@
     }
 }
 
-@media only screen and (min-width: 752px) {
+@media only screen and (min-width: 767px) {
 
     .container {
         section {
-            right: 10rem;
+            right: 5rem;
 
-        }
+            h2 {
+                font-size: clamp(32pt, 42pt + 3vw, 96pt);
+            }
+            }
 
-        svg {
-            bottom: 5%;
-            right: 30%;
-            pointer-events: none;
-        }
 
-        .moon {
-            height: clamp(250px, 250px + 10vw, 300px);
-            // width: clamp(350px, 350px + 10vw, 1200px);
-            left: 0;
-            border-radius: 50%;
-            // background-color: #D9D9D9;
-
-            & * {
-                // @include flexCenter();
-                border-radius: 50%;
+            //forest svg
+            svg {
                 position: absolute;
-                transform-origin: center;
+                bottom: 0;
+                right: 0%;
+                overflow: hidden;
+                filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
+                transform: scaleY(1);
+                z-index: 3;
+
 
             }
 
-            .inner {
-                aspect-ratio: 1/1;
+            .moon {
+                height: clamp(300px, 300px + 10vw, 500px);
+                bottom: -10%;
+                left: -30%;
+                border-radius: 50%;
+                // background-color: #D9D9D9;
+
+                & * {
+                    // @include flexCenter();
+                    border-radius: 50%;
+                    position: absolute;
+                    transform-origin: center;
+
+                }
+
+                .inner {
+                    aspect-ratio: 1/1;
+                    // transform: translate(50%, 50%);
+                    height: 100%;
+                    background-color: #D9D9D9;
+                    z-index: 2;
+                    transform: scale(0.9);
+                    pointer-events: none;
+                }
+
                 // transform: translate(50%, 50%);
-                height: 100%;
-                background-color: #D9D9D9;
-                z-index: 2;
-                transform: scale(0.9);
-                pointer-events: none;
-            }
-
-            // transform: translate(50%, 50%);
-            .outer {
-                pointer-events: none;
-                height: 100%;
-                aspect-ratio: 1/1;
-                background-color: #D9D9D9;
-                opacity: 0.4;
-                z-index: 1;
-                animation: 5s shine infinite;
-
-            }
-        }
-
-
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .container {
-        section {
-            right: 20rem;
-
-        }
-
-        svg {
-            bottom: -5%;
-            right: 20%;
-            pointer-events: none;
-        }
-
-        .moon {
-            height: clamp(350px, 350px + 20vw, 400px) !important;
-            // height: 650px !important;
-            aspect-ratio: 1/1;
-            bottom: 5%;
-            left: 5%;
-            & * {
-                // left: -20%;
-
-            }
-
-            .inner {
-
-                background-color: #D9D9D9;
-                transform: scale(0.9);
-
-                &:hover {
-                    background-color: $color200;
-                    cursor: grab;
+                .outer {
+                    pointer-events: none;
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                    background-color: #D9D9D9;
+                    opacity: 0.4;
+                    z-index: 1;
+                    animation: 5s shine infinite;
 
                 }
             }
 
-            .outer {
-                background-color: #D9D9D9;
-                opacity: 0.4;
-                animation: 4s shine infinite;
 
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .container {
+            section {
+                right: 20rem;
+
+            }
+
+            svg {
+                bottom: -5%;
+                right: 20%;
+                pointer-events: none;
+            }
+
+            .moon {
+                height: clamp(350px, 350px + 20vw, 400px) !important;
+                // height: 650px !important;
+                aspect-ratio: 1/1;
+                bottom: 5%;
+                left: 5%;
+
+                & * {
+                    // left: -20%;
+
+                }
+
+                .inner {
+
+                    background-color: #D9D9D9;
+                    transform: scale(0.9);
+
+                    &:hover {
+                        background-color: $color200;
+                        cursor: grab;
+
+                    }
+                }
+
+                .outer {
+                    background-color: #D9D9D9;
+                    opacity: 0.4;
+                    animation: 4s shine infinite;
+
+                }
             }
         }
     }
-}
