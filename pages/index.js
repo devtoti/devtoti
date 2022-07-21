@@ -45,56 +45,86 @@ export default function Home() {
 
 
   // //scroll animation *now disabled
-//   useEffect(() => {
-//     console.log(currPathLength)
-//     let pathLength = pathRef.current?.getTotalLength()
-//     setCurrPathLength(pathLength)
+  useEffect(() => {
+    console.log(currPathLength)
+    let pathLength = pathRef.current?.getTotalLength()
+    setCurrPathLength(pathLength)
 
-//     const handleScroll = () => {
-//       let pathLength = pathRef.current.getTotalLength()
-//       setCurrPathLength(pathLength)
-//       console.log(currPathLength)
-//       // debugger;
+    const handleScroll = () => {
+      let pathLength = pathRef.current.getTotalLength()
+      setCurrPathLength(pathLength)
+      console.log(currPathLength)
+      // debugger;
 
-//       let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+      let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
-//       let drawLength = pathLength * scrollPercentage;
+      let drawLength = pathLength * scrollPercentage;
 
-//       let strokeOffset = pathLength - drawLength;
+      let strokeOffset = pathLength - drawLength;
 
-//       setCurrStrokeOffset(strokeOffset)
-//       const results = [scrollPercentage, strokeOffset, drawLength];
-  
-//     }
+      setCurrStrokeOffset(strokeOffset)
+      const results = [scrollPercentage, strokeOffset, drawLength];
 
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll)
-//   }, [currPathLength])
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [currPathLength])
 
 
 
+  // <svg viewBox="0 0 311 3685" fill="none" preserveAspectRatio='xMidYMid meet' className={styles.linePath}>
+  //   {/* <rect width="360" height="3700" fill="#1C1C31" /> */}
+  //   <path d="M114 74H109V1669" stroke="url(#paint0_linear_45_18)" strokeWidth={winHeight > 1000 ? "20" : "10"} ref={pathRef}
+  //     style={{
+  //       strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
+  //       strokeDashoffset: currStrokeOffset,
+  //     }} />
+  //   <defs>
+  //     <linearGradient id="paint0_linear_45_18" x1="111.5" y1="74" x2="111.5" y2="1669" gradientUnits="userSpaceOnUse">
+  //       <stop offset="0.0001" stop-color="#D9D9D9" />
+  //       <stop offset="0.59375" stop-color="#F2BE4B" />
+  //       <stop offset="1" stop-color="#F2AC4B" />
+  //     </linearGradient>
+  //   </defs>
+  // </svg>
   const SvgPath = () => {
     return (
-            <svg viewBox="0 0 311 3685" fill="none" preserveAspectRatio='xMaxYMax meet' className={styles.linePath}>
-              <path d="M0 0H33V3700" stroke="url(#paint0_linear_56_44)" strokeWidth={winHeight > 1000 ? "20" : "10"} ref={pathRef}
-                style={{
-                  strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
-                  strokeDashoffset: currStrokeOffset,
-                }}
-              />
-              <defs>
-                <linearGradient id="paint0_linear_56_44" x1="16.5" y1="0" x2="16.5" y2="3700" gradientUnits="userSpaceOnUse">
-                  <stop stopColorolor="#F2994A" />
-                  <stop offset="0.0001" stopColorolor="#D9D9D9" />
-                  <stop offset="0.723958" stopColorolor="#F2BE4B" />
-                  <stop offset="1" stopColorolor="#F2AC4B" />
-                </linearGradient>
-              </defs>
-              </svg>
-  
+      <svg viewBox="0 0 1509 5" fill="none" preserveAspectRatio='xMaxYMin meet' className={styles.linePath}>
+        <path d="M0 2.5H1509" stroke="url(#paint0_linear_67_21)" stroke-miterlimit="1.41421" strokeWidth={winHeight > 1000 ? "5" : "3"} ref={pathRef}
+          style={{
+            strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
+            strokeDashoffset: currStrokeOffset,
+          }} />
+        <defs>
+          <linearGradient id="paint0_linear_67_21" y1="754.5" x1="2.5" y2="754.5" x2="3.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D9CCAF" />
+            <stop stop-color="#F2C94C" />
+            {/* <stop offset="1" stop-color="#F2BE4B" /> */}
+          </linearGradient>
+        </defs>
+      </svg>
+
+
     )
   }
-  
+  // <svg viewBox="0 0 311 3685" fill="none" preserveAspectRatio='xMaxYMax meet' className={styles.linePath}>
+  //   <path d="M0 0H33V3700" stroke="url(#paint0_linear_56_44)" strokeWidth={winHeight > 1000 ? "20" : "10"} ref={pathRef}
+  //     style={{
+  //       strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
+  //       strokeDashoffset: currStrokeOffset,
+  //     }}
+  //   />
+  //   <defs>
+  //     <linearGradient id="paint0_linear_56_44" x1="16.5" y1="0" x2="16.5" y2="3700" gradientUnits="userSpaceOnUse">
+  //       <stop stopColorolor="#F2994A" />
+  //       <stop offset="0.0001" stopColorolor="#D9D9D9" />
+  //       <stop offset="0.723958" stopColorolor="#F2BE4B" />
+  //       <stop offset="1" stopColorolor="#F2AC4B" />
+  //     </linearGradient>
+  //   </defs>
+  //   </svg>
+
 
   return (
     <>
@@ -103,16 +133,16 @@ export default function Home() {
         <Head>
           <title>Devtoti Portfolio</title>
           <meta name="description" content="Generated by create next app" />
-         
-            <link rel="icon" href="/favicon.ico" />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet" />
+
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet" />
 
 
         </Head>
         <Navbar />
-    {/* <SvgPath/> */}
+        <SvgPath />
         <section>
 
           <Cover />
