@@ -143,18 +143,20 @@ export default function Home() {
         </Head>
         <Navbar />
         <SvgPath />
-        <section>
+        <section id="cover">
 
           <Cover />
         </section>
-        <section>
+        <section id="about">
           <About />
         </section>
-        <section>
+        <section id="projects">
           <Projects />
+        </section>
+        <section id="skills">
           <Skills />
         </section>
-        <section>
+        <section id="contact">
           <Contact />
         </section>
       </div >

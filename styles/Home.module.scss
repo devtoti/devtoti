@@ -2,19 +2,24 @@
 @import 'mixins';
 
 .main {
-    //     position: relative;
-    min-height: 100vh;
-    scroll-snap-type: y mandatory;
-    
-    // overflow: scroll;
-    // overflow-y: scroll;
+
+    overflow-y: scroll !important;
+    scroll-snap-type: y mandatory !important;
+    height: 100vh  !important;
 
     //    div[class*='container']
-    >section {
-        scroll-snap-align: start !important;
-        scroll-snap-stop: always;
-        // min-height: 100vh;
-        // outline: 2px solid yellow;
+    section {
+        height: 100vh;
+        width: 100vw;
+        scroll-snap-align: start  !important;
+        // display: flex;
+        // flex-flow: column nowrap;
+        // align-items: center;
+        // justify-content: center;
+    }
+
+    section[id*="projects"] {
+        height: 200vh;
     }
 
 }
