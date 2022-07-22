@@ -35,7 +35,7 @@ import { useEffect, useState, useRef } from 'react';
 export default function Home() {
   const pathRef = useRef()
   const [currPathLength, setCurrPathLength] = useState(1000)
-  const [currStrokeOffset, setCurrStrokeOffset] = useState(5015)
+  const [currStrokeOffset, setCurrStrokeOffset] = useState(0)
   const [winHeight, setWinHeight] = useState(0)
 
   useEffect(() => {
@@ -90,7 +90,7 @@ export default function Home() {
   // </svg>
   const SvgPath = () => {
     return (
-      <svg viewBox="0 0 1509 5" fill="none" preserveAspectRatio='xMaxYMin meet' className={styles.linePath}>
+      <svg viewBox="0 0 1509 5" fill="none" preserveAspectRatio='xMidYMin meet' className={styles.linePath}>
         <path d="M0 2.5H1509" stroke="url(#paint0_linear_67_21)" stroke-miterlimit="1.41421" strokeWidth={winHeight > 768 ? "10" : "20"} ref={pathRef}
           style={{
             strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
@@ -100,7 +100,6 @@ export default function Home() {
           <linearGradient id="paint0_linear_67_21" y1="754.5" x1="2.5" y2="754.5" x2="3.5" gradientUnits="userSpaceOnUse">
             <stop stop-color="#D9CCAF" />
             <stop stop-color="#F2C94C" />
-            {/* <stop offset="1" stop-color="#F2BE4B" /> */}
           </linearGradient>
         </defs>
       </svg>
@@ -108,22 +107,6 @@ export default function Home() {
 
     )
   }
-  // <svg viewBox="0 0 311 3685" fill="none" preserveAspectRatio='xMaxYMax meet' className={styles.linePath}>
-  //   <path d="M0 0H33V3700" stroke="url(#paint0_linear_56_44)" strokeWidth={winHeight > 1000 ? "20" : "10"} ref={pathRef}
-  //     style={{
-  //       strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
-  //       strokeDashoffset: currStrokeOffset,
-  //     }}
-  //   />
-  //   <defs>
-  //     <linearGradient id="paint0_linear_56_44" x1="16.5" y1="0" x2="16.5" y2="3700" gradientUnits="userSpaceOnUse">
-  //       <stop stopColorolor="#F2994A" />
-  //       <stop offset="0.0001" stopColorolor="#D9D9D9" />
-  //       <stop offset="0.723958" stopColorolor="#F2BE4B" />
-  //       <stop offset="1" stopColorolor="#F2AC4B" />
-  //     </linearGradient>
-  //   </defs>
-  //   </svg>
 
 
   return (

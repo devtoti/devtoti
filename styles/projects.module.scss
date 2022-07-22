@@ -19,7 +19,7 @@
     }
 
     .proyect {
-        &:nth-child(3) {
+        &:last-child {
             // outline: 2px solid #F2994A;
             // opacity: 0.5;
             position: relative;
@@ -146,11 +146,11 @@
 
         // dissable github icon on xavier card
 
-        &:nth-child(5) {
+        &:nth-child(3) {
             div[class*='links'] :nth-child(2) svg {
                 fill: $color900;
+                cursor: wait;
                 pointer-events: none;
-                cursor: default;
                 // outline: 2px solid red;
             }
         }

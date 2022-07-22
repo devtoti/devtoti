@@ -56,15 +56,7 @@ export default function Projects(props) {
             repo="lithium-highlights/tree/grid-styling"
             id="2"
           />
-          <ProjectCard
-            name="Cartoon Generator"
-            description="React App made for customizing and downloading cartoon portraits based on user data. These portraits are meant to be used as social media profile pictures."
-            img={lomadiamanteImg}
-            labels={lomaDiamanteLabels}
-            url="https://portraitgenerator.vercel.app"
-            repo="cp-generator"
-            id="3"
-          />
+       
           {/* <ProjectCard
             name="Cartoon Portrait Generator"
             description="Designed the main website for a Mexican real estate development company that sells, rents and renovates existing houses and appartments in Mexico City."
@@ -74,7 +66,7 @@ export default function Projects(props) {
             repo="loma-diamante"
             id="3"
           /> */}
-        <ProjectCard
+        {/* <ProjectCard
           name="Modeling Portfolio"
           description="Digital modeling book for self-promotion purposes. Made for professional photoshootings and casting opportunities."
           img={newiconImg}
@@ -82,7 +74,7 @@ export default function Projects(props) {
           url="https://totistyles.vercel.app"
           repo="totistyles"
           id="4"
-        />
+        /> */}
         <ProjectCard
           name="Xavier Web Design"
           description="Built and designed custom maps, schemes and graphics for a startup company growing in data science and product analytics."
@@ -101,6 +93,15 @@ export default function Projects(props) {
           repo="wordle"
           id="6"
         />
+           <ProjectCard
+            name="Cartoon Generator"
+            description="React App made for customizing and downloading cartoon portraits based on user data. These portraits are meant to be used as social media profile pictures."
+            img={lomadiamanteImg}
+            labels={lomaDiamanteLabels}
+            url="https://portraitgenerator.vercel.app"
+            repo="cp-generator"
+            id="3"
+          />
 
       </div>
     </>
