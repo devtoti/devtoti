@@ -151,6 +151,61 @@
     }
 }
 
+.startIcon {
+    @include flexCenter();
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    max-height: 50px;
+    z-index: 20;
+    // outline: 2px solid red;
+    transform: scale(0.4);
+    // translateY(50%);
+    
+    svg {
+        display: inline;
+        all: revert;
+        height: auto;
+        width: auto;
+        // outline: 2px solid blue;
+        fill: transparent;
+        opacity: 0.5;
+        
+        path {
+            max-height: 50px;
+            
+        }
+
+        & :last-child {
+        }
+
+        & :first-child {
+            animation: 2s downarrow infinite;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        @keyframes downarrow {
+            0% {
+
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(5%);
+            }
+            100% {
+                transform: translateY(0);
+
+            }
+        }
+
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
     .container {
@@ -160,112 +215,112 @@
             h2 {
                 font-size: clamp(32pt, 42pt + 3vw, 96pt);
             }
-            }
+        }
 
 
-            //forest svg
-            svg {
-                position: absolute;
-                bottom: -10px;
-                right: 0%;
-                overflow: hidden;
-                // filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
-                // filter: brightness(0) saturate(100%);
-                filter: invert(10%) sepia(25%) saturate(1117%) hue-rotate(201deg) brightness(92%) contrast(94%);
-                transform: scaleY(1);
-                z-index: 3;
-
-
-            }
-
-            .moon {
-                height: clamp(400px, 400px + 10vw, 600px) !important;
-                bottom: -10%;
-                left: -20%;
-                border-radius: 50%;
-                // background-color: #D9D9D9;
-
-                & * {
-                    // @include flexCenter();
-                    border-radius: 50%;
-                    position: absolute;
-                    transform-origin: center;
-
-                }
-
-                .inner {
-                    aspect-ratio: 1/1;
-                    // transform: translate(50%, 50%);
-                    height: 100%;
-                    background-color: #D9D9D9;
-                    z-index: 2;
-                    transform: scale(0.9);
-                    pointer-events: none;
-                }
-
-                // transform: translate(50%, 50%);
-                .outer {
-                    pointer-events: none;
-                    height: 100%;
-                    aspect-ratio: 1/1;
-                    background-color: #D9D9D9;
-                    opacity: 0.4;
-                    z-index: 1;
-                    animation: 5s shine infinite;
-
-                }
-            }
+        //forest svg
+        svg {
+            position: absolute;
+            bottom: -10px;
+            right: 0%;
+            overflow: hidden;
+            // filter: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(4679%) hue-rotate(206deg) brightness(94%) contrast(94%);
+            // filter: brightness(0) saturate(100%);
+            filter: invert(10%) sepia(25%) saturate(1117%) hue-rotate(201deg) brightness(92%) contrast(94%);
+            transform: scaleY(1);
+            z-index: 3;
 
 
         }
-    }
 
-    @media only screen and (min-width: 1280px) {
+        .moon {
+            height: clamp(400px, 400px + 10vw, 600px) !important;
+            // bottom: -10%;
+            left: -20%;
+            border-radius: 50%;
+            // background-color: #D9D9D9;
 
-        .container {
-            section {
-                right: 20rem;
+            & * {
+                // @include flexCenter();
+                border-radius: 50%;
+                position: absolute;
+                transform-origin: center;
 
             }
 
-            //forest svg
-            svg {
-                width: 100vw;
-                bottom: -15%;
-                // right: 20%;
+            .inner {
+                aspect-ratio: 1/1;
+                // transform: translate(50%, 50%);
+                height: 100%;
+                background-color: #D9D9D9;
+                z-index: 2;
+                transform: scale(0.9);
                 pointer-events: none;
             }
 
-            .moon {
-                height: clamp(350px, 350px + 20vw, 900px) !important;
-                // height: 650px !important;
+            // transform: translate(50%, 50%);
+            .outer {
+                pointer-events: none;
+                height: 100%;
                 aspect-ratio: 1/1;
-                bottom: 5%;
-                left: 5%;
+                background-color: #D9D9D9;
+                opacity: 0.4;
+                z-index: 1;
+                animation: 5s shine infinite;
 
-                & * {
-                    // left: -20%;
+            }
+        }
 
-                }
 
-                .inner {
+    }
+}
 
-                    background-color: #D9D9D9;
-                    transform: scale(0.9);
+@media only screen and (min-width: 1280px) {
 
-                    &:hover {
-                        background-color: $color200;
-                        cursor: grab;
+    .container {
+        section {
+            right: 20rem;
 
-                    }
-                }
+        }
 
-                .outer {
-                    background-color: #D9D9D9;
-                    opacity: 0.4;
-                    animation: 4s shine infinite;
+        //forest svg
+        svg {
+            width: 100vw;
+            bottom: -15%;
+            // right: 20%;
+            pointer-events: none;
+        }
+
+        .moon {
+            height: clamp(350px, 350px + 20vw, 900px) !important;
+            // height: 650px !important;
+            aspect-ratio: 1/1;
+            bottom: 5%;
+            left: 5%;
+
+            & * {
+                // left: -20%;
+
+            }
+
+            .inner {
+
+                background-color: #D9D9D9;
+                transform: scale(0.9);
+
+                &:hover {
+                    background-color: $color200;
+                    cursor: grab;
 
                 }
             }
+
+            .outer {
+                background-color: #D9D9D9;
+                opacity: 0.4;
+                animation: 4s shine infinite;
+
+            }
         }
     }
+}

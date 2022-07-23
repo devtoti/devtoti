@@ -79,7 +79,7 @@ export default function Contact() {
             Find me on
           </p> */}
           <GitHubIcon onClick={()=> window.open('https://github.com/devtoti/', "_blank")} />
-          <DribbbleLogo onClick={()=> window.open('https://dribbble.com/totisketches', "_blank")}/>
+          <DribbbleLogo onClick={()=> window.open('https://dribbble.com/totisketches/collections/', "_blank")}/>
           <LinkedinLogo onClick={()=> window.open('https://www.linkedin.com/in/devtoti/', "_blank")}/>
         </section>
         </div>

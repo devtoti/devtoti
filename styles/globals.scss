@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
     // overflow-x: hidden;
+    scroll-behavior: smooth;
 
 }
 
@@ -25,7 +26,6 @@ body {
     // scroll-snap-type: y mandatory;
     // overflow-y: scroll;
     // height: 100vh;
-    // scroll-behavior: smooth;
 
 }
 

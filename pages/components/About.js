@@ -29,7 +29,7 @@ export default function About() {
 
         <h3 data-title> About me
         </h3>
-        <p>My name is <span>Antonio Ruiz</span> but you can call me Toti. I am a frontend developer and illustrator who enjoys building aesthetically pleasing apps and websites for better user experiences.
+        <p>I am a frontend developer and illustrator based in Mexico City who enjoys building aesthetically pleasing apps and websites to ensure positive, enjoyable user experiences.
         </p>
         <button type="button">
         <a href="docs/devtoti-cv-2022.pdf" target="_blank">Resume</a>

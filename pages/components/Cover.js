@@ -1,7 +1,10 @@
+import Link from 'next/link'
+
 import { useState, useEffect } from 'react'
 import styles from '../../styles/_cover.module.scss'
 import ForestBg from '../../public/svg/ForestBg'
 import Moon4 from "../../public/images/moon4.png";
+import Start from '../../public/svgIcons/Start.js'
 export default function Cover() {
   const [objStyle, setObjStyle] = useState({})
   const [winHeight, setWinHeight] = useState(0)
@@ -72,6 +75,13 @@ export default function Cover() {
          ></div>
         <div className={styles.inner}></div>
       </div>
+      <div className={styles.startIcon}>
+        {/* <Link href="#section-one">
+      <Start />
+        </Link> */}
+
+      </div>
+
     </div>
   )
 
