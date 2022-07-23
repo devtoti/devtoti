@@ -42,12 +42,14 @@ export default function Skills() {
 
     return (
         <div className={styles.container} id="section-three">
-            {/* <h2>Skills</h2> */}
+            <h3 data-title>Skills</h3>
+            <div className={styles.skills}>
             <SkillSet set={languageSkills} title="languages"/>
             <SkillSet set={frameworkSkills} title="FW's & Libraries"/>
             <SkillSet set={communicationSkills} title="communication"/>
             <SkillSet set={designSkills} title="design"/>
             <SkillSet set={toolingSkills} title="tools"/>
+            </div>
         </div>
     )
 }

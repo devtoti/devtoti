@@ -7,6 +7,15 @@
     position: relative;
     overflow-y: visible !important;
 
+    h3[data-title] {
+        margin-bottom: 1.2rem;
+        font-size: clamp(16pt, 20pt + 2vw, 28pt);
+        // position: absolute;
+        color: $color300;
+        font-weight: 500;
+        // text-align: center;
+    }
+
     &::before {
         content: '';
         display: block;
@@ -18,26 +27,30 @@
         z-index: 30;
     }
 
-    .proyect {
-        &:last-child {
-            // outline: 2px solid #F2994A;
-            // opacity: 0.5;
-            position: relative;
+    .grid {
 
-            &::after {
-                content: 'coming soon';
-                display: block;
-                position: absolute;
-                font-size: clamp(16pt, 16pt + 2vw, 18pt);
-                color: $color200;
-                text-transform: capitalize;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(1px);
+        .proyect {
+            &:last-child {
+                // outline: 2px solid #F2994A;
+                // opacity: 0.5;
+                position: relative;
+
+                &::after {
+                    content: 'coming soon';
+                    display: block;
+                    position: absolute;
+                    font-size: clamp(16pt, 16pt + 2vw, 18pt);
+                    color: $color200;
+                    text-transform: capitalize;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    backdrop-filter: blur(1px);
+                }
             }
         }
     }
@@ -50,7 +63,7 @@
     height: auto;
     position: relative;
 
-    div {
+    div:not(.grid) {
         background-color: $color700;
         color: $color400;
         // height: 30vh;
@@ -110,57 +123,61 @@
 
     }
 
-    .proyect {
-        position: relative;
-        overflow: visible;
-        z-index: 2;
-        // outline: 2px solid #F2994A;
-        box-shadow: 9px 9px 5px -5px rgba(0, 0, 0, 0.1), inset 11px 11px 7px -8px #ffff;
-        // height: clamp(a 200px + 10vh, 500px);
+    .grid {
 
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: -webkit-linear-gradient(225deg, #F2C94C, #F2994A);
-            z-index: -1;
-            transition: 4s translate ease-in-out;
-            // transform: translateX(0);
-        }
+        .proyect {
+            position: relative;
+            overflow: visible;
+            z-index: 2;
+            // outline: 2px solid #F2994A;
+            box-shadow: 9px 9px 5px -5px rgba(0, 0, 0, 0.1), inset 11px 11px 7px -8px #ffff;
+            // height: clamp(a 200px + 10vh, 500px);
 
-        &:hover {
-
-            h3,
-            div[class*='content'],
-            div[class*='chips'] {
-                transform: translateX(0.5rem);
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: -webkit-linear-gradient(225deg, #F2C94C, #F2994A);
+                z-index: -1;
+                transition: 4s translate ease-in-out;
+                // transform: translateX(0);
             }
 
-            div[class*='proyect'] {
-                border: 2px solid #F2C94C;
+            &:hover {
+
+                h3,
+                div[class*='content'],
+                div[class*='chips'] {
+                    transform: translateX(0.5rem);
+                }
+
+                div[class*='proyect'] {
+                    border: 2px solid #F2C94C;
+                }
+
             }
 
-        }
+            // dissable github icon on xavier card
 
-        // dissable github icon on xavier card
-
-        &:nth-child(3) {
-            div[class*='links'] :nth-child(2) svg {
-                fill: $color900;
-                cursor: wait;
-                pointer-events: none;
-                // outline: 2px solid red;
+            &:nth-child(3) {
+                div[class*='links'] :nth-child(2) svg {
+                    fill: $color900;
+                    cursor: wait;
+                    pointer-events: none;
+                    // outline: 2px solid red;
+                }
             }
         }
     }
+
 }
 
 
-@media only screen and (min-width: 752px) {
+@media only screen and (min-width: 768px) {
 
-    .container {
+    .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -210,7 +227,7 @@
 
 @media only screen and (min-width: 1280px) {
 
-    .container {
+    .grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
         gap: 2em;
 

@@ -48,19 +48,23 @@ export default function Contact() {
         </div>
         <div className={styles.contact}>
 
-          <h3 data-title style={{ textAlign: "center", paddingTop: "1rem" }}> Contact
+          <h3 data-title style={{ textAlign: "center", paddingTop: "1rem" }}>
+            Contact
           </h3>
-          <Divider variant="middle" />
+          <p>
+            Drop me a message so we can start working together
+          </p>
+          {/* <Divider variant="middle" /> */}
 
           <div className="mail-section" id="mail-section">
-
+      
             {/* <input type="text" value="toti.webdev@gmail.com"></input> */}
-            <h5>
-              toti.webdev@gmail.com
+            <h5 onClick={() => window.location.href='mailto:toti.webdev@gmail.com?subject=Additional information request on your web portfolio'}>
+              Send Email
             </h5>
             <Stack spacing={1} sx={{ width: 'auto' }}>
 
-              <ContentCopyIcon onClick={(e) => handleClick(e)} value="toti.webdev@gmail.com" />
+              {/* <ContentCopyIcon onClick={(e) => handleClick(e)} value="toti.webdev@gmail.com" /> */}
 
               <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
@@ -71,6 +75,9 @@ export default function Contact() {
             {/* <SendIcon onClick={() => console.log('asd')} /> */}
           </div>
         <section>
+        {/* <p data-socialmedia>
+            Find me on
+          </p> */}
           <GitHubIcon onClick={()=> window.open('https://github.com/devtoti/', "_blank")} />
           <DribbbleLogo onClick={()=> window.open('https://dribbble.com/totisketches', "_blank")}/>
           <LinkedinLogo onClick={()=> window.open('https://www.linkedin.com/in/devtoti/', "_blank")}/>
