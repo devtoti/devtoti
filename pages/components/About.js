@@ -32,7 +32,7 @@ export default function About() {
         <p>I am a frontend developer and illustrator based in Mexico City who enjoys building aesthetically pleasing apps and websites to ensure positive, enjoyable user experiences.
         </p>
         <button type="button">
-        <a href="docs/devtoti-cv-2022.pdf" target="_blank">Resume</a>
+        <a href="docs/devtoti-cv-2022.pdf" target="_blank">Resumé</a>
         </button>
       
       </div>
