@@ -46,14 +46,14 @@ export default function Home() {
 
   // //scroll animation *now disabled
   useEffect(() => {
-    console.log(currPathLength)
+    // console.log(currPathLength)
     let pathLength = pathRef.current?.getTotalLength()
     setCurrPathLength(pathLength)
 
     const handleScroll = () => {
       let pathLength = pathRef.current.getTotalLength()
       setCurrPathLength(pathLength)
-      console.log(currPathLength)
+      // console.log(currPathLength)
       // debugger;
 
       let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
@@ -90,8 +90,8 @@ export default function Home() {
   // </svg>
   const SvgPath = () => {
     return (
-      <svg viewBox="0 0 1509 5" fill="none" preserveAspectRatio='xMidYMin meet' className={styles.linePath}>
-        <path d="M0 2.5H1509" stroke="url(#paint0_linear_67_21)" strokeMiterlimit="1.41421" strokeWidth={winHeight > 768 ? "10" : "20"} ref={pathRef}
+      <svg viewBox={`0 0 1509 ${winHeight < 762 ? "20" : "10"}`} fill="none" preserveAspectRatio='xMidYMin meet' className={styles.linePath}>
+        <path d="M0 2.5H1509" stroke="url(#paint0_linear_67_21)" strokeMiterlimit="1.41421" strokeWidth={winHeight > 350 ? "20" : "30"} ref={pathRef}
           style={{
             strokeDasharray: `${currPathLength + ' ' + currPathLength}`,
             strokeDashoffset: currStrokeOffset,

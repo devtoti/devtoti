@@ -28,14 +28,16 @@ body {
 
 }
 
-
+section[id*="projects"] {
+    padding-bottom: 3rem;
+}
 
 @media only screen and (min-width: 754px) {
 
     * {
         li {
 
-            font-size: clamp(10pt, 10pt + 1vw, 16pt);
+            // font-size: clamp(10pt, 10pt + 1vw, 16pt);
         }
     }
 
@@ -46,7 +48,7 @@ body {
         // padding-right: 4rem !important;
 
         h3 {
-            font-size: clamp(16pt, 16pt + 2vw, 20pt);
+            // font-size: clamp(16pt, 16pt + 2vw, 20pt);
 
         }
 

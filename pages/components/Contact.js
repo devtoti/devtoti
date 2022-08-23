@@ -52,7 +52,7 @@ export default function Contact() {
             Contact
           </h3>
           <p>
-            Drop me a message so we can start working together
+            Do you have an ongoing proyect? Feel free to reach out.
           </p>
           {/* <Divider variant="middle" /> */}
 

@@ -66,7 +66,7 @@ export default function ProjectCard(props) {
                 <GitHubIcon onClick={() => window.open(repo, "_blank")} />
               </h4>
               <h4>
-                  <a href={dribbbleUrl} target="_blank">
+                  <a href={dribbbleUrl} target="_blank" rel="noreferrer">
                 <img
                   src="images/icons8-dribbble-50.png"
                   alt="Dribbble Logo"
