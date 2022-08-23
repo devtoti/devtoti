@@ -27,9 +27,9 @@ export default function About() {
     <div className={styles.container} id="section-one">
       <div>
 
-        <h3 data-title> About me
+        <h3 data-title> Antonio Ruiz
         </h3>
-        <p>I am a frontend developer and illustrator based in Mexico City who enjoys building aesthetically pleasing apps and websites to ensure positive, enjoyable user experiences.
+        <p>Front-end Web Designer and Illustrator with over three years experience in web technologies. I enjoy building aesthetically pleasing and accessible apps to ensure positive, enjoyable user experiences.
         </p>
         <button type="button">
         <a href="docs/antonioruiz_resume.pdf" target="_blank">Resumé</a>

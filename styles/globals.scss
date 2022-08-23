@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
-    // overflow-x: hidden;
     scroll-behavior: smooth;
 
 }
@@ -43,8 +42,8 @@ body {
     div[class*='container'] {
         //    padding: 0 10rem !important;
 
-        padding-left: 4rem !important;
-        padding-right: 4rem !important;
+        // padding-left: 4rem !important;
+        // padding-right: 4rem !important;
 
         h3 {
             font-size: clamp(16pt, 16pt + 2vw, 20pt);
@@ -53,7 +52,7 @@ body {
 
         p,
         li {
-            font-size: clamp(10pt, 10pt + 1vw, 14pt);
+            // font-size: clamp(10pt, 10pt + 1vw, 14pt);
         }
     }
 

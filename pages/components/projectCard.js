@@ -1,85 +1,97 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import styles from '../../styles/projects.module.scss'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkIcon from '@mui/icons-material/Link';
-import Chip from '@mui/material/Chip';
-import { medizenLabels } from './Projects'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkIcon from "@mui/icons-material/Link";
+import InfoIcon from "@mui/icons-material/Info";
+import styles from "../../styles/projects.module.scss"
 
-export default function ProjectCard(props, { lbls }) {
-    const { name, description, img, url, repo, id, labels } = props
+export default function ProjectCard(props) {
+  const {
+    name,
+    description,
+    img,
+    url,
+    repo,
+    id,
+    labels,
+    category,
+    about,
+    dribbbleUrl
+  } = props;
+  const [newLabel, setNewLabel] = useState([]);
+  const [isActive, setIsActive] = useState(false);
+  const ref = useRef();
 
-    const router = useRouter()
-    const sendToPage = (e) => {
-        e.preventDefault()
-        window.open(url, "_blank")
-    }
-    const sendToGithub = (e) => {
-        e.preventDefault()
-        if (repo.includes('xavier')) return 
-        window.open(`https://github.com/devtoti/${repo}`, "_blank")
-    }
+  useEffect(() => {
+    setNewLabel(labels);
+  }, [labels]);
 
+  const displayLables = (labels) => {
+    return labels.map((el, id) => (
+      <p id={id} key={id < 10 ? `0${id}` : id}>
+        {el}
+      </p>
+    ));
+  };
 
-    const [newLabel, setNewLabel] = useState([])
-    useEffect(() => {
-        setNewLabel(labels)
-        // console.log(labels)
-    }, [labels])
+  const showProjectInfo = () => {
+    // console.log(ref.current.classList.toggle({styles.active});
+    setIsActive(a => !a)
+  };
 
-    const displayLables = labels => {
-        // console.log(labels)
-        const obj = { ...labels }
-        // console.log(Object.values(obj))
-        // console.log(Array.isArray(labels))
-        return labels.map((el, id) => 
-            <p id={id} key={id}>{el}</p>)
-    }
+  const activeCard = isActive ? `${styles.card} ${styles.active}` : styles.card
+  return (
+    <>
+      <div className={activeCard} id={id} ref={ref}>
+        <div className={`${styles.face} ${styles.front}`}>
+          <div className={`${styles.card__header}`}>
+            <h1>{name}</h1>
+            <h2>{category}</h2>
+            <h3>{id < 10 ? `0${id}` : id}</h3>
+            <img src={img} alt={category}></img>
+            <h4 id={"info" + id} onClick={showProjectInfo}>
+              <InfoIcon />
+            </h4>
+          </div>
+          <div className={`${styles.card__content}`}>
+            <p>{description}</p>
+          </div>
+          <div className={styles.card__footer}>
+            <hr></hr>
+            <div className={styles.chips}>{displayLables(newLabel)}</div>
+            <div className={styles.links}>
+              <h4>
+                <LinkIcon onClick={() => window.open(url, "_blank")} />
+              </h4>
+              <h4>
+                <GitHubIcon onClick={() => window.open(repo, "_blank")} />
+              </h4>
+              <h4>
+                  <a href={dribbbleUrl} target="_blank">
+                <img
+                  src="images/icons8-dribbble-50.png"
+                  alt="Dribbble Logo"
+                >
 
-    return (
-        <div className={styles.proyect} id={name}>
-            <h3>{name}</h3>
-            <div className="content">
-                {/* <div className="image" style={{ position: "relative" }}>
-                    <Image
-                        src={img}
-                        alt="`project ${name} illustration"
-                        layout='fill'
-                        objectFit='contain'
-                    />
-                </div> */}
-                <p>{description}</p>
+                </img>
+                    </a>
+              </h4>
             </div>
-            <div className="chips">
-                <div className="labels">
-                {displayLables(newLabel)}
-
-                </div>
-                <div className="links">
-
-                    <h4 onClick={sendToPage}>
-                        <LinkIcon />
-                    </h4>
-                    <h4 onClick={sendToGithub}>
-                        <GitHubIcon />
-                    </h4>
-                </div>
-            </div>
-
-
+          </div>
         </div>
-    )
+        <div className={`${styles.face} ${styles.back}`}>
+          <div className={styles.card__header}>
+            <h1>About</h1>
+            <h2>{name}</h2>
+            <h4 id={"info" + id} onClick={showProjectInfo}>
+              <InfoIcon />
+            </h4>
+          </div>
+          <div className={styles.card__content}>
+            <p>{about}</p>
+          </div>
+          <div className={styles.card__footer}></div>
+        </div>
+      </div>
+    </>
+  );
 }
-
-
-// export async function getStaticProps(medizenLabels) {
-//     const lbls = medizenLabels
-//     return {
-//         props: {
-//             lbls
-//         }
-//     }
-//   }
