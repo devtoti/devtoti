@@ -1,6 +1,6 @@
 import styles from '../../styles/projects.module.scss'
 import ProjectCard from '../components/projectCard'
-import { info_cards } from "../components/info_cards.js";
+import { info_cards } from "../../components/info_cards.js";
 
 export default function Projects(props) {
 
@@ -8,7 +8,7 @@ export default function Projects(props) {
   // const cards2= info_cards.map(card => ({id: card.id}))
   
   const info_cards_sort = info_cards.sort((a,b) => (a.id < b.id) ?  -1 : 1)
-  
+
   // console.log(info_cards_sort)
 
   return (
