@@ -15,7 +15,7 @@ export default function ProjectCard(props) {
     labels,
     category,
     about,
-    dribbbleUrl
+    dribbble
   } = props;
   const [newLabel, setNewLabel] = useState([]);
   const [isActive, setIsActive] = useState(false);
@@ -66,10 +66,11 @@ export default function ProjectCard(props) {
                 <GitHubIcon onClick={() => window.open(repo, "_blank")} />
               </h4>
               <h4>
-                  <a href={dribbbleUrl} target="_blank" rel="noreferrer">
+                  <a href={dribbble} target="DribbbleWindow">
                 <img
                   src="images/icons8-dribbble-50.png"
                   alt="Dribbble Logo"
+                 
                 >
 
                 </img>

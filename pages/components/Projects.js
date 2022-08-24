@@ -15,7 +15,7 @@ export default function Projects(props) {
     <>
      <h3 data-title className={styles.title}> Projects
         </h3>
-    <div className={`${styles.container} ${styles.grid}`}>
+    <div className={`${styles.container} ${styles.grid}`} id="projects">
     {info_cards_sort.map((card, ix) => (
       <ProjectCard
       name={card.name}

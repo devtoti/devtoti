@@ -24,7 +24,7 @@ export default function About() {
   }
   return (
 
-    <div className={styles.container} id="section-one">
+    <div className={styles.container} id="about">
       <div>
 
         <h3 data-title> Antonio Ruiz
@@ -32,7 +32,7 @@ export default function About() {
         <p>Front-end Web Designer and Illustrator with over three years experience in web technologies. I enjoy building aesthetically pleasing and accessible apps to ensure positive, enjoyable user experiences.
         </p>
         <button type="button">
-        <a href="docs/antonioruiz_resume.pdf" target="_blank">Resumé</a>
+        <a href="docs/antonioruiz_resume_frontend.pdf" target="_blank">Resumé</a>
         </button>
       
       </div>

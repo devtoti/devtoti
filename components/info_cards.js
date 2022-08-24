@@ -11,9 +11,9 @@ export const info_cards = [
       githubUrl:
         "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
       pageUrl: "https://devtoti.github.io/lithium-highlights/",
-      dribbbleUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
-      id: 5,
-      category: "Mobile App Add-On"
+      dribbbleUrl: "https://dribbble.com/totisketches/collections",
+      category: "Mobile App Add-On",
+      id:5,
     },
     {
       name: "UI Designs",
@@ -27,7 +27,7 @@ export const info_cards = [
       githubUrl:
         "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
       pageUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
-      dribbbleUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
+      dribbbleUrl: "https://dribbble.com/totisketches/collections",
       id: 1,
       category: "Dribbble Portfolio"
     },
@@ -42,7 +42,7 @@ export const info_cards = [
       labels: ["reactjs", "css", "animations", "figma", "js"],
       githubUrl: "https://github.com/devtoti/medizen/tree/gh-pages",
       pageUrl: "https://devtoti.github.io/medizen/",
-      dribbbleUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
+      dribbbleUrl: "https://dribbble.com/totisketches/collections",
       id: 2,
       category: "Meditation App"
     },
@@ -56,7 +56,7 @@ export const info_cards = [
       labels: ["tailwind", "mockup", "wireframes", "figma", "js"],
       githubUrl: "https://github.com/devtoti/",
       pageUrl: "https://xavier-theta.vercel.app/",
-      dribbbleUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
+      dribbbleUrl: "https://dribbble.com/totisketches/collections",
       id: 4,
       category: "Data Structure, Analytics & AI"
     },
@@ -70,7 +70,7 @@ export const info_cards = [
       labels: ["nextjs", "scalable", "css", "figma", "js"],
       githubUrl: "https://github.com/devtoti/wordle",
       pageUrl: "https://wordle-izwzssqqy-devtoti.vercel.app/",
-      dribbbleUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
+      dribbbleUrl: "https://dribbble.com/totisketches/collections",
       id: 3,
       category: "Scrabble-like game"
     },

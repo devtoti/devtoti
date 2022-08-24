@@ -47,15 +47,15 @@ const navigateTo = section => {
         <div className={styles.menu} id="ul-navigation" style={{height: winHeight, width: "50vw"}}>
           <CloseIcon onClick={() => setOpenDialog(a=>!a)}/>
       <ul onClick={(e) => navigateTo(e)}>
-        <Link href="#section-one">
+        <Link href="#about">
         <li>About</li>
         </Link>
-        <Link href="#section-two">
+        <Link href="#projects">
         <li>Projects</li>
         </Link>
-        <Link href="#section-three">
+        {/* <Link href="#section-three">
         <li>Skills</li>
-        </Link>
+        </Link> */}
         <Link href="#contact">
         <li>Contact</li>
         </Link>
