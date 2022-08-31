@@ -7,7 +7,7 @@ export const info_cards = [
       about:
         "The project's main concept is to create an app extension that offers users new functionalities for quick data filtering whilst mimicking the original Lithium App interface and design. No more unreadable HTML generated files!",
       // img: "../public/imgs/medizen-cover.png",s
-      labels: ["vanillajs", "css", "mobileapp", "figma", "html"],
+      labels: ["js", "css", "figma", "html"],
       githubUrl:
         "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
       pageUrl: "https://devtoti.github.io/lithium-highlights/",
@@ -23,7 +23,7 @@ export const info_cards = [
       about:
         "This personal portfolio intends to show a general sneak peek of my design process. At this site it is possible to browse my latests UI designs as well as my code implementations, mostly done using HTML, CSS, and JS.",
       // img: "../public/imgs/medizen-cover.png",
-      labels: ["figma", "photoshop", "illustrator", "codesandbox"],
+      labels: ["figma", "photoshop", "illustrator", "ui/ux"],
       githubUrl:
         "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
       pageUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
@@ -39,7 +39,7 @@ export const info_cards = [
       about:
         "The app's primary intention is to provide meditators with a simple and straight-forward interface for meditating. The minimalistic design prioritizes relaxation over excessive parameters that are often included in other commercial applications.",
       // img: "../public/imgs/medizen-cover.png",
-      labels: ["reactjs", "css", "animations", "figma", "js"],
+      labels: ["reactjs", "css", "animations", "figma"],
       githubUrl: "https://github.com/devtoti/medizen/tree/gh-pages",
       pageUrl: "https://devtoti.github.io/medizen/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
@@ -53,7 +53,7 @@ export const info_cards = [
       about:
         "Artificial Intelligence Startup that focuses on finding the hottest upcoming products that are about to make an impact in the market. Ideal for serious sellers who want to succeed at Amazon before certain products go viral.",
       img: "images/xavier-cover.png",
-      labels: ["tailwind", "mockup", "wireframes", "figma", "js"],
+      labels: ["design", "wireframes", "prototyping"],
       githubUrl: "https://github.com/devtoti/",
       pageUrl: "https://xavier-theta.vercel.app/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
@@ -67,7 +67,7 @@ export const info_cards = [
       about:
         "This simple online game has been built for entertainment purposes. It's primary goal was focused on code training, particularly on functional programming using JavaScript. Will you be able to guess the next five letter word?",
       img: "images/wordle-cover.png",
-      labels: ["nextjs", "scalable", "css", "figma", "js"],
+      labels: ["nextjs", "css", "figma", "js"],
       githubUrl: "https://github.com/devtoti/wordle",
       pageUrl: "https://wordle-izwzssqqy-devtoti.vercel.app/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",

@@ -29,7 +29,7 @@ export default function About() {
 
         <h3 data-title> Antonio Ruiz
         </h3>
-        <p>Front-end Web Designer and Illustrator with over three years experience in web technologies. I enjoy building aesthetically pleasing and accessible apps to ensure positive, enjoyable user experiences.
+        <p>Architect and developer during daylight, werewolf by night. I enjoy building aesthetically pleasing apps and websites.
         </p>
         <button type="button">
         <a href="docs/antonioruiz_resume_frontend.pdf" target="_blank">Resumé</a>
