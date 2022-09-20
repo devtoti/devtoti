@@ -60,7 +60,7 @@ export default function Cover() {
     <div className={styles.container} style={{ minHeight: winHeight }}>
       <section>
         <h2><span>_</span>devtoti</h2>
-        <h4>Frontend Designer</h4>
+        <h4>Frontend Developer</h4>
         {/* <h5>Job Portfolio</h5> */}
       </section>
       <ForestBg />

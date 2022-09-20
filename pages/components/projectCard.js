@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import InfoIcon from "@mui/icons-material/Info";
 import styles from "../../styles/projects.module.scss"
-
+import Image from 'next/image'
 export default function ProjectCard(props) {
   const {
     name,
@@ -20,7 +20,7 @@ export default function ProjectCard(props) {
   const [newLabel, setNewLabel] = useState([]);
   const [isActive, setIsActive] = useState(false);
   const ref = useRef();
-
+  const img2 = "/" + img
   useEffect(() => {
     setNewLabel(labels);
   }, [labels]);
@@ -41,13 +41,21 @@ export default function ProjectCard(props) {
   const activeCard = isActive ? `${styles.card} ${styles.active}` : styles.card
   return (
     <>
-      <div className={activeCard} id={id} ref={ref}>
+      <div className={activeCard} id={id} ref={ref} >
         <div className={`${styles.face} ${styles.front}`}>
-          <div className={`${styles.card__header}`}>
+          <div className={`${styles.card__header}`} style={{ position: 'relative' }}>
             <h1>{name}</h1>
             <h2>{category}</h2>
             <h3>{id < 10 ? `0${id}` : id}</h3>
-            <img src={img} alt={category}></img>
+            {/* <img src={img} alt={category}></img> */}
+            <Image
+              src={img2}
+              alt={category}
+              layout="fill"
+              objectFit='cover'
+              priority="true"
+
+            />
             <h4 id={"info" + id} onClick={showProjectInfo}>
               <InfoIcon />
             </h4>
@@ -60,21 +68,24 @@ export default function ProjectCard(props) {
             <div className={styles.chips}>{displayLables(newLabel)}</div>
             <div className={styles.links}>
               <h4>
-                <LinkIcon onClick={() => window.open(url, "_blank")} />
-              </h4>
-              <h4>
-                <GitHubIcon onClick={() => window.open(repo, "_blank")} />
-              </h4>
-              <h4>
-                  <a href={dribbble} target="DribbbleWindow">
-                <img
-                  src="images/icons8-dribbble-50.png"
-                  alt="Dribbble Logo"
-                 
-                >
 
-                </img>
-                    </a>
+                <a href={url} target="_blank" rel="noopener" >
+                  <LinkIcon />
+                </a>
+              </h4>
+              <h4>
+
+                <a href={repo} target="_blank" rel="noopener" >
+                  <GitHubIcon />
+                </a>
+              </h4>
+              <h4>
+                <a href={dribbble} target="DribbbleWindow">
+                  <img
+                    src="images/icons8-dribbble-50.png"
+                    alt="Dribbble Logo"
+                  />
+                </a>
               </h4>
             </div>
           </div>

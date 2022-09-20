@@ -141,7 +141,7 @@
 
 
     &:hover {
-        cursor: pointer;
+        // cursor: pointer;
         background-color: rgb(16, 16, 33);
 
         hr {
@@ -158,14 +158,23 @@
 
 
 .card__header {
-    margin-top: 1rem;
+    // margin-top: 1rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
 
 
+    span {
+        // outline: 1px solid green;
+        position: absolute;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        height: 200% !important;
+        pointer-events: none;
+        
+    }
 
-    img {
+    img, img>span {
         position: absolute;
         max-width: 100%;
         -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
@@ -241,8 +250,9 @@
     padding: 0 1.5rem;
 
     p {
-        margin-top: 0;
         // padding: 0.5rem 0;
+        font-size: large;
+        margin-top: 0;
         padding-top: 0.5rem;
         text-align: start;
     }
@@ -307,6 +317,11 @@
 
     }
 
+    svg {
+        height: 24px;
+        width: 24px;
+    }
+
     h4 {
         display: flex;
         justify-content: center;
@@ -315,6 +330,8 @@
 
     a {
         height: 24px;
+        text-decoration: none;
+        color: $color400;
     }
 }
 
@@ -370,6 +387,7 @@
     .card__content {
 
         p {
+            
             margin-top: 0;
             padding-top: 1rem;
 

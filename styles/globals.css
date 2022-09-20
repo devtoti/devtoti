@@ -3,33 +3,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto Flex", sans-serif;
-}
-
-n html,
-body {
-  background-color: #1C1C31;
-}
-
-body {
-  overscroll-behavior-y: none;
   scroll-behavior: smooth;
 }
 
-@media only screen and (min-width: 754px) {
-  * li {
-    font-size: clamp(10pt, 10pt + 1vw, 16pt);
-  }
-  div[class*=container] {
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
-  }
-  div[class*=container] h3 {
-    font-size: clamp(16pt, 16pt + 2vw, 20pt);
-  }
-  div[class*=container] p, div[class*=container] li {
-    font-size: clamp(10pt, 10pt + 1vw, 14pt);
-  }
+html,
+body {
+  background-color: #2d2d4e;
 }
+
+section[id*=projects] {
+  padding-bottom: 3rem;
+  background-color: #1c1c31;
+}
+
 @media only screen and (min-width: 1280px) {
   div[class*=container] {
     padding-left: 8rem !important;

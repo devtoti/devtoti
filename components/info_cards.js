@@ -1,20 +1,21 @@
 export const info_cards = [
     {
-      name: "Lithium Highlights",
+      name: "SD Cuisine",
       description:
-        "Website made for uploading user's Lithium HTML files and filtering book annotations. Made as an extension, it helps users navigate their book's highlights way faster.",
-      img: "images/lithium-cover.png",
+        "E-commerce mockup site built with Material UI and AI algorithms for generating funny products' images and descriptions.",
+      img: "images/sdcuisine-cover.png",
       about:
-        "The project's main concept is to create an app extension that offers users new functionalities for quick data filtering whilst mimicking the original Lithium App interface and design. No more unreadable HTML generated files!",
+        "The main purpose of this project is to integrate Google's Design System into an almost-fully working website for purchasing products online, so that it can be later used as a common template for future e-commerce websites.",
       // img: "../public/imgs/medizen-cover.png",s
-      labels: ["js", "css", "figma", "html"],
+      labels: ["MUI", "AI art", "react", "router"],
       githubUrl:
-        "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
-      pageUrl: "https://devtoti.github.io/lithium-highlights/",
+        "https://github.com/devtoti/strangelydisturbingcuisine",
+      pageUrl: "https://devtoti.github.io/strangelydisturbingcuisine",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
-      category: "Mobile App Add-On",
-      id:5,
+      category: "E-Commerce Site",
+      id:2,
     },
+ 
     {
       name: "UI Designs",
       description:
@@ -28,7 +29,7 @@ export const info_cards = [
         "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
       pageUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
-      id: 1,
+      id: 4,
       category: "Dribbble Portfolio"
     },
     {
@@ -43,7 +44,7 @@ export const info_cards = [
       githubUrl: "https://github.com/devtoti/medizen/tree/gh-pages",
       pageUrl: "https://devtoti.github.io/medizen/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
-      id: 2,
+      id: 3,
       category: "Meditation App"
     },
     {
@@ -57,7 +58,7 @@ export const info_cards = [
       githubUrl: "https://github.com/devtoti/",
       pageUrl: "https://xavier-theta.vercel.app/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
-      id: 4,
+      id: 5,
       category: "Data Structure, Analytics & AI"
     },
     {
@@ -71,7 +72,7 @@ export const info_cards = [
       githubUrl: "https://github.com/devtoti/wordle",
       pageUrl: "https://wordle-izwzssqqy-devtoti.vercel.app/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
-      id: 3,
+      id: 6,
       category: "Scrabble-like game"
     },
     {
@@ -132,7 +133,7 @@ export const info_cards = [
       githubUrl: "https://github.com/devtoti/",
       pageUrl: "https://totaldevs.com/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections/5860431-UI-Design",
-      id: 6 ,
+      id: 1 ,
       category: "LATAM Developers' Community"
     },
    
@@ -140,3 +141,19 @@ export const info_cards = [
   
   ];
   
+     // {
+    //   name: "Lithium Highlights",
+    //   description:
+    //     "Website made for uploading user's Lithium HTML files and filtering book annotations. Made as an extension, it helps users navigate their book's highlights way faster.",
+    //   img: "images/lithium-cover.png",
+    //   about:
+    //     "The project's main concept is to create an app extension that offers users new functionalities for quick data filtering whilst mimicking the original Lithium App interface and design. No more unreadable HTML generated files!",
+    //   // img: "../public/imgs/medizen-cover.png",s
+    //   labels: ["js", "css", "figma", "html"],
+    //   githubUrl:
+    //     "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
+    //   pageUrl: "https://devtoti.github.io/lithium-highlights/",
+    //   dribbbleUrl: "https://dribbble.com/totisketches/collections",
+    //   category: "Mobile App Add-On",
+    //   id:5,
+    // },
