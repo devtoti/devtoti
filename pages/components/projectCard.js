@@ -69,13 +69,13 @@ export default function ProjectCard(props) {
             <div className={styles.links}>
               <h4>
 
-                <a href={url} target="_blank" rel="noopener" >
+                <a href={url} target="_blank" rel="noreferrer" >
                   <LinkIcon />
                 </a>
               </h4>
               <h4>
 
-                <a href={repo} target="_blank" rel="noopener" >
+                <a href={repo} target="_blank" rel="noreferrer" >
                   <GitHubIcon />
                 </a>
               </h4>
