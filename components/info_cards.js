@@ -23,7 +23,6 @@ export const info_cards = [
       img: "images/dribbble-cover.png",
       about:
         "This personal portfolio intends to show a general sneak peek of my design process. At this site it is possible to browse my latests UI designs as well as my code implementations, mostly done using HTML, CSS, and JS.",
-      // img: "../public/imgs/medizen-cover.png",
       labels: ["figma", "photoshop", "illustrator", "ui/ux"],
       githubUrl:
         "https://github.com/devtoti/lithium-highlights/tree/grid-styling",
@@ -41,7 +40,7 @@ export const info_cards = [
         "The app's primary intention is to provide meditators with a simple and straight-forward interface for meditating. The minimalistic design prioritizes relaxation over excessive parameters that are often included in other commercial applications.",
       // img: "../public/imgs/medizen-cover.png",
       labels: ["reactjs", "css", "animations", "figma"],
-      githubUrl: "https://github.com/devtoti/medizen/tree/gh-pages",
+      githubUrl: "https://github.com/devtoti/medizen/tree/master",
       pageUrl: "https://devtoti.github.io/medizen/",
       dribbbleUrl: "https://dribbble.com/totisketches/collections",
       id: 3,
